@@ -1,0 +1,16 @@
+.hbBoardListItem {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(184, 184, 184);
+  display: inline-block;
+  margin: 5px;
+}
+
+.hbBoardListItem * {
+  text-decoration: none;
+}
+.hbBoardItem {
+  height: 100%;
+  width: 100%;
+  color: white;
+}

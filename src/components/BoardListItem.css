@@ -1,0 +1,16 @@
+.boardListItem {
+  width: 300px;
+  height: 500px;
+  background-color: rgb(184, 184, 184);
+  display: inline-block;
+  margin: 5px;
+}
+
+.boardListItem * {
+  text-decoration: none;
+}
+.boardItem {
+  height: 100%;
+  width: 100%;
+  color: white;
+}

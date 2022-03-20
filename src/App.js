@@ -19,8 +19,8 @@ import BoardDetail from './components/BoardDetail';
 // 행복 저금통--------------------------------------------
 import HBList from './components/HBList';
 import HBCreate from './components/HBCreate';
+// import HBUpdate from './HBUpdate';
 import HBOpen from './components/HBOpen';
-import HBPast from './components/HBPast';
 // 행복 저금통 게시글 ----------------------------------
 import HBBoardList from './components/HBBoardList';
 import HBBoardListItem from './components/HBBoardListItem';
@@ -48,8 +48,8 @@ function App() {
       
       <Link to="HBList">[행복저금통 목록]</Link>&nbsp;
       <Link to="HBCreate">[저금통 등록하기]</Link>&nbsp;
-      <Link to="HBOpen">[저금통 개봉하기]</Link>&nbsp;
-      <Link to="HBPast">[지난 저금통 보기]</Link> <hr/>
+      {/* <Link to="HBUpdate">[저금통 수정하기]</Link>&nbsp; */}
+      <Link to="HBOpen">[저금통 개봉하기]</Link><hr/>
 
       <Link to="HBBoardList">[행복저금통 게시글 목록 조회]</Link>&nbsp;
       <Link to="HBBoardListItem">[행복저금통 게시글 아이템]</Link>&nbsp;
@@ -72,18 +72,18 @@ function App() {
         <Route path="/BoardList" element={<BoardList/>} />
         <Route path="/BoardListItem" element={<BoardListItem/>} />
         <Route path="/BoardInsert" element={<BoardInsert/>} />
-        <Route path="/BoardUpdate" element={<BoardUpdate/>} />
-        <Route path="/BoardDetail" element={<BoardDetail/>} />
+        <Route path="/BoardUpdate/:bNo" element={<BoardUpdate/>} />
+        <Route path="/BoardDetail/:bNo" element={<BoardDetail/>} />
 
         <Route path="/HBList" element={<HBList/>} />
         <Route path="/HBCreate" element={<HBCreate />} />
+        {/* <Route path="/HBUpdate" element={<HBUpdate />} /> */}
         <Route path="/HBOpen" element={<HBOpen/>} />
-        <Route path="/HBPast" element={<HBPast/>} />
 
         <Route path="/HBBoardList" element={<HBBoardList/>} />
         <Route path="/HBBoardListItem" element={<HBBoardListItem/>} />
         <Route path="/HBBoardInsert" element={<HBBoardInsert/>} />
-        <Route path="/HBBoardDetail" element={<HBBoardDetail/>} />
+        <Route path="/HBBoardDetail/:hb_bNo" element={<HBBoardDetail/>} />
       </Routes>
     </div>
   );
