@@ -29,11 +29,13 @@ function BoardListItem(props) {
                     <p>(내용){props.board.bContent}</p>
                     (기분번호){props.board.feelNo}<br/>
                     (기분타입명){props.board.feelType}<br/>
+                    (기분아이콘 파일명){props.board.feelIcon}<br/>
                     (작성자이메일){props.board.memEmail}<br/>
                     (작성자닉네임){props.board.memNick}<br/>
                     (작성일){props.board.bWriteDate}<br/>
                     <Link to={"/boardUpdate/" + props.board.bNo}>수정</Link><br/>
                     <button onClick={onDeleteItem}>삭제</button>
+                    <img className="feelIcon" alt="기분아이콘" src={require(`../img/${props.board.feelIcon}`)} />
                 </div>
             </Link>
         </div>

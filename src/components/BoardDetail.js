@@ -16,9 +16,11 @@ const BoardDetail = (props) => {
         bWriteDate: '',
         feelNo: '',
         memNick: '',
-        feelType: ''
+        feelType: '',
+        feelIcon: ''
     });
 
+    const [feelIconImg, setFeelIconImg] = useState('');
     const [loading, setLoading] = useState(false);
 
     // 서버에 요청해서 데이터 받아옴
@@ -26,7 +28,7 @@ const BoardDetail = (props) => {
     const loadData = async () => {
         setLoading(true);
         const response = await axios.get('http://localhost:8080/boardDetail/' + bNo);
-        console.log(response.data);
+        // console.log(response.data);
         setBoard({
             // bNo: response.data.bNo,
             memEmail: response.data.memEmail,
@@ -35,8 +37,11 @@ const BoardDetail = (props) => {
             bWriteDate: response.data.bWriteDate,
             feelNo: response.data.feelNo,
             memNick: response.data.memNick,
-            feelType: response.data.feelType
+            feelType: response.data.feelType,
+            feelIcon: response.data.feelIcon
         });
+
+        setFeelIconImg("../img/" + response.data.feelIcon);
         setLoading(false);
     }
 
@@ -54,10 +59,13 @@ const BoardDetail = (props) => {
             내용 : {board.bContent}<br/>
             기분번호 : {board.feelNo}<br/>
             기분타입명 : {board.feelType}<br/>
+            기분아이콘 파일명{board.feelIcon}<br/>
             작성자 이메일 : {board.memEmail}<br/>
             작성자 닉네임 : {board.memNick}<br/>
             작성일 : {board.bWriteDate}<br/>
             <hr/>
+            {feelIconImg}
+            {/* <img src={require('../img/glad.png')}/> */}
         </div>
     );
 };

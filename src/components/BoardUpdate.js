@@ -25,7 +25,7 @@ const BoardUpdate = () => {
     const loadData = async () => {
         setLoading(true);
         const response = await axios.get('http://localhost:8080/boardDetail/' + bNo);
-        console.log(response.data);
+        // console.log(response.data);
         setBoard({
             bNo: response.data.bNo,
             memEmail: response.data.memEmail,
@@ -34,6 +34,12 @@ const BoardUpdate = () => {
             bWriteDate: response.data.bWriteDate,
             feelNo: response.data.feelNo
         });
+
+        var checkedRadio = document.getElementsByName('feelNo');
+        // console.log(checkedRadio);
+        // console.log(response.data.feelNo);
+        var feelNoRC = response.data.feelNo - 1;
+        checkedRadio[feelNoRC].checked = true;
         setLoading(false);
     }
 
@@ -122,11 +128,18 @@ const BoardUpdate = () => {
                         </tr>
                         <tr>
                             <td>기분</td>
-                            <td> <input
-                                type="text"
-                                name="feelNo"
-                                value={board.feelNo}
-                                onChange={onChange} />
+                            <td>
+                                <label for="glad">기쁨</label><input id="glad" type="radio" name="feelNo" value={1} onChange={onChange} />
+                                <label for="happy">행복</label><input id="happy" type="radio" name="feelNo" value={2} onChange={onChange} />
+                                <label for="proud">뿌듯</label><input id="proud" type="radio" name="feelNo" value={3} onChange={onChange} />
+                                <label for="calm">평온</label><input id="calm" type="radio" name="feelNo" value={4} onChange={onChange} />
+                                <label for="unrest">불안</label><input id="unrest" type="radio" name="feelNo" value={5} onChange={onChange} />
+                                <label for="sad">슬픔</label><input id="sad" type="radio" name="feelNo" value={6} onChange={onChange} />
+                                <label for="depressed">우울</label><input id="depressed" type="radio" name="feelNo" value={7} onChange={onChange} />
+                                <label for="tired">피곤</label><input id="tired" type="radio" name="feelNo" value={8} onChange={onChange} />
+                                <label for="dissatisfaction">불만</label><input id="dissatisfaction" type="radio" name="feelNo" value={9} onChange={onChange} />
+                                <label for="angry">화남</label><input id="angry" type="radio" name="feelNo" value={10} onChange={onChange} />
+                                <label for="special">스페셜</label><input id="special" type="radio" name="feelNo" value={11} onChange={onChange} />
                             </td>
                         </tr>
                         <tr>

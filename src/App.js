@@ -32,7 +32,7 @@ import HBBoardDetail from './components/HBBoardDetail';
 function App() {
   return (
     <div className='App'>
-      
+      <IndexNav></IndexNav>
       <h1>인덱스 페이지</h1>
       <Link to="/">[홈]</Link> &nbsp; <hr/>
 

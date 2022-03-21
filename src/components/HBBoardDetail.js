@@ -28,7 +28,7 @@ const HBBoardDetail = () => {
     const loadData = async () => {
         setLoading(true);
         const response = await axios.get('http://localhost:8080/hbBoardDetail/' + hb_bNo);
-        console.log(response.data);
+        // console.log(response.data);
         setHBBoard({
             // hb_bNo: response.data.hb_bNo,
             memEmail: response.data.memEmail,

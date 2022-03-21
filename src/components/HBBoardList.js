@@ -12,7 +12,7 @@ const HBBoardList = () => {
     const loadData = async () => {
     setLoading(true);
     const response = await axios.get('http://localhost:8080/hbBoardList');
-    console.log(response.data);
+    // console.log(response.data);
     setData(response.data.hbBoardList);
     setLoading(false);
     }

@@ -1,0 +1,157 @@
+/* .loginAllForm{
+    background-color: #f9f4ed;
+    text-align: center;
+    margin:0;
+}
+
+.socialLoginList {
+    padding: 30px 0px 30px 0px;
+}
+
+.loginForm {
+    padding-bottom: 15px;
+}
+
+
+.loginEmailBox {
+    padding-bottom: 10px;
+    
+}
+
+.joinEmail{
+    height: 50px;
+    width: 300px;
+}
+
+/* .joinEmailText{
+    height: 22px;
+    width: 140px;
+}
+
+.joinEmailSelect{
+    height: 28px;
+    width: 140px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 2px;
+    color: rgb(112 80 68);
+    text-align: center;
+    font-size: 14px;
+} */
+/* 
+.pw {
+    height: 50px;
+    width: 300px;
+    margin-bottom: 10px;
+} */
+
+/* input::placeholder{
+    color: rgb(112 80 68);
+    text-align: center;
+    font-size: 15px;
+}
+
+button{
+    border: 0;
+    color: #84695e;
+    border-radius: 5px;
+    background: white;
+}  */
+
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+* {margin:0; padding:0; box-sizing: border-box;}
+
+
+.body2{
+    font-family: 'Gamja Flower', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white no-repeat center;
+    background-size: cover;
+}
+
+.body2::before{
+    content: "";
+    position: absolute; z-index: 1;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(254 255 249);
+}
+
+.login-form {position:relative; z-index:2;}
+.login-form h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.int-area {
+    width:400px;
+    position: relative;
+    margin-top: 20px;
+}
+.int-area:first-child{
+    margin-top:0;
+}
+.int-area input {
+    width:100%;
+    padding:20px 10px 10px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #000;;
+    font-size: 18px; color:#000;
+    outline: none;
+}
+.int-area label{
+    position: absolute; left: 10px; top:15px;
+    font-size: 18px;
+    color: #999;
+    /* 클릭시 글씨 0.5s 속도 주기 */
+    transition: all .5s ease; 
+}
+
+.int-area label.warning {
+    color: red !important;
+    animation: warning .3s ease;
+    animation-iteration-count: 3;
+}
+
+@keyframes warning {
+    0% {transform: translateX(-8px);}
+    25% {transform: translateX(8px);}
+    50% {transform: translateX(-8px);}
+    75% {transform: translateX(8px);}
+}
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top:0;
+    font-size: 13px; color: #e7b510;
+}
+.btn-area {
+    margin-top: 30px;
+}
+
+.btn-area button{
+    width: 100%; height: 50px;
+    background: #e39764;
+    color:#fff;
+    font-size: 20px;
+    border:none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.caption {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.caption a {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+}
