@@ -69,7 +69,7 @@ const BoardUpdate = () => {
             .then(
                 response => {
                     alert("수정 완료");
-                    history('/boardList'); // 일반 게시글 전체 목록 조회
+                    // history('/boardList'); // 일반 게시글 전체 목록 조회
                 }
             );
     }

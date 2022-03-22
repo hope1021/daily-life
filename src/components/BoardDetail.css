@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
-
 .bTitleBox {
   background: #fff7b0;
   height: 350px;
@@ -9,7 +7,6 @@
 .bTitle > h1 {
   font-weight: 600;
   font-size: 40px;
-  font-family: "Gowun Dodum", sans-serif;
 }
 
 .bTitle {
@@ -28,7 +25,6 @@
   top: 69%;
   left: 26%;
   text-align: left;
-  font-family: "Gowun Dodum", sans-serif;
 }
 
 .bContent {
@@ -36,6 +32,5 @@
   margin: 0 auto;
   padding: 60px 0;
   font-size: 18px;
-  font-family: "Gowun Dodum", sans-serif;
   line-height: 35px;
 }

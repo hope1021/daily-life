@@ -29,51 +29,19 @@
   padding: 27px 30px 0 30px;
 }
 
-.hbContents > h3 {
+.hbTitle > h3 {
   font-size: 20px;
 }
 
-/* 색상 */
-.glad {
-  background-color: rgb(248, 245, 90);
+.hbText {
+  margin: 15px 0;
 }
 
-.happy {
-  background-color: rgb(255, 205, 234);
+.hbInfo {
 }
 
-.proud {
-  background-color: rgb(197, 240, 240);
+.hbBRD {
 }
 
-.calm {
-  background-color: rgb(141, 218, 106);
-}
-
-.unrest {
-  background-color: rgb(145, 122, 74);
-}
-
-.sad {
-  background-color: rgb(78, 98, 165);
-}
-
-.depressed {
-  background-color: rgb(178, 123, 204);
-}
-
-.tired {
-  background-color: rgb(148, 148, 148);
-}
-
-.dissatisfaction {
-  background-color: rgb(255, 157, 65);
-}
-
-.angry {
-  background-color: rgb(255, 91, 112);
-}
-
-.special {
-  background-color: rgb(255, 230, 0);
+.hbFT {
 }

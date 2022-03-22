@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+
+body * {
+  font-family: "Gowun Dodum", sans-serif;
+}
+
 .low {
   display: flex;
   flex-direction: row;

@@ -19,7 +19,7 @@ import BoardDetail from './components/BoardDetail';
 // 행복 저금통--------------------------------------------
 import HBList from './components/HBList';
 import HBCreate from './components/HBCreate';
-// import HBUpdate from './HBUpdate';
+import HBUpdate from './components/HBUpdate';
 import HBOpen from './components/HBOpen';
 // 행복 저금통 게시글 ----------------------------------
 import HBBoardList from './components/HBBoardList';
@@ -104,7 +104,7 @@ function App() {
 
         <Route path="/HBList" element={<HBList/>} />
         <Route path="/HBCreate" element={<HBCreate />} />
-        {/* <Route path="/HBUpdate" element={<HBUpdate />} /> */}
+        <Route path="/HBUpdate/:hbNo" element={<HBUpdate />} />
         <Route path="/HBOpen" element={<HBOpen/>} />
 
         <Route path="/HBBoardList" element={<HBBoardList/>} />

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Top from './IndexTop';
 import Bottom from './IndexBottom';
+import HBListItem from './HBListItem';
 
 function HBList(props) {
 
@@ -15,8 +15,7 @@ function HBList(props) {
     const HBLoadDate = async () => {
         setHBLoading(true);
         const response = await axios.get('http://localhost:8080/HBList');
-        console.log(response.HBDate);
-        setHBDate(response.HBDate.HBList);
+        setHBDate(response.data.HBList);
         setHBLoading(false);
     }
 
@@ -26,6 +25,7 @@ function HBList(props) {
         HBLoadDate();
     }, []);
 
+
     return (
         <div id='wrap'>
 
@@ -33,34 +33,27 @@ function HBList(props) {
 
             <section>
                 <h1>행복 저금통 목록</h1>
-
-                {/* <Link to={"/"}> */}
                     <div id='AllHBList'>
                     <table border="1">
-                        {/* <tr> <th>번호</th>      <td></td> </tr>
-                        <tr> <th>이름</th>      <td></td> </tr>
-                        <tr> <th>종료날짜</th>  <td></td> </tr>
-                        <tr> <th>생성날짜</th>  <td></td> </tr>
-                        <tr> <th>만든이</th>    <td></td> </tr> */}
-                    
                         <thead>
                             <tr>
                                 <th>번호</th>
                                 <th>이름</th>
-                                <th>종료날짜</th>
                                 <th>생성날짜</th>
+                                <th>종료날짜</th>
                                 <th>만든이</th>
+                                
+                                <th>수정</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
-                                HBDate.map(function (hb, i) {
-                                    return <HBList hb={hb} key={i} />
+                                HBDate.map(function (HB, i) {
+                                    return <HBListItem HB={HB} key={i} />
                                 })
                             }
                         </tbody>
                     </table>
-
                     </div>
             </section>
 

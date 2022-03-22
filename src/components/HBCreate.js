@@ -4,15 +4,14 @@ import axios from 'axios';
 import Top from './IndexTop';
 import Bottom from './IndexBottom';
 
-function HBCreate(props) {
-    
+const HBCreate = () => {
   let history = useNavigate();
 
   // state
   const [HB, setHB] = useState({ 
-    hbNo: '',         // 행복저금통 번호
+    //hbNo: '',         // 행복저금통 번호
     hbName: '',       // 행복저금통 이름
-    hbStartDate: '',  // 행복저금통 시작 날짜
+    //hbStartDate: '',  // 행복저금통 시작 날짜
     hbEndDate: '',    // 행복저금통 종료 날짜
     memEmail: ''      // 회원 이메일 (외래키)
   });
@@ -27,9 +26,9 @@ function HBCreate(props) {
 
   const onReset = () => {
     setHB({
-      hbNo: '',         // 행복저금통 번호
+      //hbNo: '',         // 행복저금통 번호
       hbName: '',       // 행복저금통 이름
-      hbStartDate: '',  // 행복저금통 시작 날짜
+      //hbStartDate: '',  // 행복저금통 시작 날짜
       hbEndDate: '',    // 행복저금통 종료 날짜
       memEmail: ''      // 회원 이메일 (외래키)
     });
@@ -38,13 +37,13 @@ function HBCreate(props) {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    var frmHBData = new FormData(document.frmHBCreate); // 폼 id 가져옴
+    var frmHBData = new FormData(document.frmHBCreateForm); // 폼 id 가져옴
 
-    axios.props('http://localhost:8080/HBCreate',frmHBData)
+    axios.post('http://localhost:8080/HBCreate/', frmHBData)
       .then(
           response => {
             alert("저금통 등록 완료");
-            history('/HBList');
+            history('/HBList'); // 행복저금통 목록으로 이동
           }
       );
   }
@@ -57,7 +56,8 @@ function HBCreate(props) {
       <section>
         <h1> 나만의 행복 저금통 만들기 </h1>
 
-          <form name='frmHBCreate' onSubmit={onSubmit} onReset={onReset}>
+          <form name='frmHBCreateForm' onSubmit={onSubmit} onReset={onReset}>
+
             <h3>저금통의 이름은 무엇인가요?</h3>
               <input type='text' name='hbName' value={HB.hbName} onChange={onChange} />
             <h3>저금통을 개봉할 날짜를 선택해주세요</h3>
@@ -67,14 +67,14 @@ function HBCreate(props) {
               </h6>
             
             {/* hidden : 회원 이메일 */}
-            <input type='hidden' name='memEmail' value='hong123@naver.com' />
+            <input type='hidden' name='memEmail' onChange={onChange} value={HB.memEmail} />
             {/* 그외 저금통 번호, 시작날짜는 DB에서 자동으로 들어가도록 했음.*/}
 
             <input type='submit' value="등록" />
             <input type='reset' value="취소" />
-            <input type='button' value="뒤로가기" />
 
           </form>
+
       </section>
 
       <Bottom></Bottom>
@@ -84,4 +84,4 @@ function HBCreate(props) {
 
 }
 
-export default HBCreate
+export default HBCreate;
