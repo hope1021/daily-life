@@ -1,8 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import './Login.css';
-import $ from 'jquery';
-import {Helmet} from "react-helmet";
 function Login(props) {
 
   const onClickbtn = () => {
@@ -98,47 +96,20 @@ function Login(props) {
         <form action=''>
           <div className='int-area'>
           <input type='text' className='id' id='id' autoComplete='off' required/>
-              <label for='id'>USER NAME</label>
+              <label for='id'>email</label>
           </div>
           <div className='int-area'>
           <input type='password' className='pw' id='pw' autoComplete='off' required/>
-              <label for='pw'>PASSWORD</label>
+              <label for='pw'>password</label>
           </div>
           <div className='btn-area'>
               <button id="btn" type="submit" onClick={check}>LOGIN</button>
           </div>
         </form>
         <div className='caption'>
-          <a href=''>Forgot Password?</a>
+          <a href=''>아이디 / 비밀번호 찾기</a>
         </div>
       </section>
-
-     
-{/* 
-      <Helmet>
-        <script>
-          let id = $('#id');
-          let pw = $('#pw');
-          let btn = $('#btn');
-
-          $(btn).on('click', function() {
-            if($(id).val() == ""){
-              $(id).next('label').addClass('warning');
-              setTimeout(function() {
-                $('label').removeClass('warning');
-              }, 1500);
-            }
-            else if($(pw).val() == "")
-            $(pw).next('label').addClass('warning');   
-            etTimeout(function() {
-                $('label').removeClass('warning');
-              }, 1500);
-          });
-          
-        </script> 
-      </Helmet> */}
-
-
       </div>
      
     </div>

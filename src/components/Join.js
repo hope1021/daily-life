@@ -13,7 +13,6 @@ function Join() {
   // state
   const [member, setMember] = useState({
     memEmail: '',
-    memEmailText: '',
     memPw: '',
     memNick: '',
     memInfo: ''
@@ -32,7 +31,6 @@ function Join() {
   const onReset = () => {
         setMember({
             memEmail: '',
-            memEmailText: '',
             memPw: '',
             memNick: '',
             memInfo: ''
@@ -42,12 +40,14 @@ function Join() {
   const onSubmit = (e) => {
         e.preventDefault();
 
+        console.log(member)
+
         var frmData = new FormData(document.joinForm);
 
         console.log(frmData)
 
 
-        axios.post('http://localhost:8080/Join', frmData)
+        axios.post('http://localhost:8080/userJoin', frmData)
             .then(
                 response => {
                     alert("등록 완료");
@@ -78,14 +78,7 @@ function Join() {
                       {/* 이메일 */}
                       <div>
                         <h5> 이메일 </h5>
-                        <input type='text' maxLength='15' name='memEmail' value={member.memEmail} onChange={onChange} />
-                        <span className="a">@</span><input type="text" name="memEmailText" id='memEmailText' value={member.memEmailText} onChange={onChange}></input>
-                        <select name='joinEmailSelect' onChange={mailChange}>
-                          <option value='write'> 직접 입력 </option>
-                          <option value='gmail.com'> gmail.com </option>
-                          <option value='naver.com'> naver.com </option>
-                          <option value="daum.com">daum.com</option>
-                        </select>
+                        <input type='email' maxLength='15' name='memEmail' value={member.memEmail} onChange={onChange} placeholder="email@example.com"/>
                       </div>
 
                       {/* 비밀번호 */}
