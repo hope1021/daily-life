@@ -4,6 +4,8 @@ import BoardListItem from './BoardListItem'
 
 function BoardList() {
 
+  
+
   // state
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -27,7 +29,7 @@ function BoardList() {
   return (
     <div>
       <h3>일반 게시글 전체 목록 조회</h3>
-      { data.map(function (board, i) {
+      { data.map((board, i)=>{
         return <BoardListItem board={board} key={i} />
       })}
     </div>

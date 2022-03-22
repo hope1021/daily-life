@@ -3,7 +3,10 @@ import AxiosSpring from './AxiosSpring';
 import Card from './Card';
 import './Home.css';
 
-function Home(props) {
+function Home({data}) {
+
+  console.log(data)
+
   return (
     <div className='colum'>
       <h1>홈 입니다</h1>
@@ -13,14 +16,11 @@ function Home(props) {
         <button className='btn'>조회순</button>
       </div>
       <div className='cardContainer low'>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        {
+          data.map((item, i)=>{
+            return <Card data={item}/>
+          })
+        }
       </div>
     </div>
   );

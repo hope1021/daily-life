@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import './BoardDetail.css';
 
 const BoardDetail = (props) => {
 
@@ -29,12 +30,13 @@ const BoardDetail = (props) => {
         setLoading(true);
         const response = await axios.get('http://localhost:8080/boardDetail/' + bNo);
         // console.log(response.data);
+        var sliceBRD = response.data.bWriteDate.slice(0,10);
         setBoard({
             // bNo: response.data.bNo,
             memEmail: response.data.memEmail,
             bTitle: response.data.bTitle,
             bContent: response.data.bContent,
-            bWriteDate: response.data.bWriteDate,
+            bWriteDate: sliceBRD,
             feelNo: response.data.feelNo,
             memNick: response.data.memNick,
             feelType: response.data.feelType,
@@ -53,19 +55,24 @@ const BoardDetail = (props) => {
 
     return (
         <div>
-            <h3>게시글 상세 정보 조회</h3>
-            글 번호 : {bNo}<br/>
-            제목 : {board.bTitle}<br/>
-            내용 : {board.bContent}<br/>
-            기분번호 : {board.feelNo}<br/>
-            기분타입명 : {board.feelType}<br/>
-            기분아이콘 파일명{board.feelIcon}<br/>
-            작성자 이메일 : {board.memEmail}<br/>
-            작성자 닉네임 : {board.memNick}<br/>
-            작성일 : {board.bWriteDate}<br/>
-            <hr/>
-            {feelIconImg}
+            {/* 글 번호 : {bNo}<br/> */}
+            {/* 작성자 이메일 : {board.memEmail}<br/> */}
+            {/* 기분번호 : {board.feelNo}<br/> */}
+            {/* 기분아이콘 파일명{board.feelIcon}<br/> */}
+            {/* {feelIconImg} */}
             {/* <img src={require('../img/glad.png')}/> */}
+            {/* 기분 : {board.feelType}<br/> */}
+            <div className='bTitleBox'>
+                <div className='bTitle'>
+                    <h1>"{board.bTitle}"</h1>
+                </div>
+                <div className='bInfo'>
+                    by {board.memNick}&nbsp;&nbsp;|&nbsp;&nbsp;{board.bWriteDate}
+                </div>
+            </div>
+            <div className='bContent'>
+                {board.bContent}<br/>
+            </div>
         </div>
     );
 };

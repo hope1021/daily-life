@@ -4,6 +4,7 @@ import axios from 'axios';
 import './BoardListItem.css';
 
 function BoardListItem(props) {
+
     let history = useNavigate();
 
     const onDeleteItem = () => {
@@ -21,6 +22,9 @@ function BoardListItem(props) {
         }
     }
 
+    console.log(props.board.feelIcon)
+
+
     return (
         <div className='boardListItem'>
             <Link to={"/boardDetail/" + props.board.bNo}>
@@ -35,7 +39,7 @@ function BoardListItem(props) {
                     (작성일){props.board.bWriteDate}<br/>
                     <Link to={"/boardUpdate/" + props.board.bNo}>수정</Link><br/>
                     <button onClick={onDeleteItem}>삭제</button>
-                    <img className="feelIcon" alt="기분아이콘" src={require(`../img/${props.board.feelIcon}`)} />
+                    <img className="feelIcon" alt="기분아이콘" src={`img/${props.board.feelIcon}`} />
                 </div>
             </Link>
         </div>

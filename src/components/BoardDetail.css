@@ -1,0 +1,35 @@
+.bTitleBox {
+  background: #fff7b0;
+  height: 350px;
+  position: relative;
+}
+
+.bTitle > h1 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.bTitle {
+  width: 900px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  text-align: left;
+}
+
+.bInfo {
+  font-size: 16px;
+  width: 400px;
+  display: inline-block;
+  position: absolute;
+  top: 69%;
+  left: 26%;
+  text-align: left;
+}
+
+.bContent {
+  width: 900px;
+  margin: 0 auto;
+  padding: 60px 0;
+  font-size: 18px;
+}

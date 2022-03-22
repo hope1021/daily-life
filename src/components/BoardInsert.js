@@ -7,11 +7,9 @@ function BoardInsert(props) {
 
     //state
     const [board, setBoard] = useState({
-        bNo: '',
         memEmail: '',
         bTitle: '',
         bContent: '',
-        bWriteDate: '',
         feelNo: ''
     });
 
@@ -37,25 +35,12 @@ function BoardInsert(props) {
             );
     }
 
-    // const onClickRadio = (e) => {
-    //     console.log(e.target.value);
-    // }
-
     return (
         <div>
             <h3>게시글 등록</h3>
             <form name="boardInsertForm" onSubmit={onSubmit}>
                 <table>
                     <thead>
-                        <tr>
-                            <td>글번호</td>
-                            <td><input
-                                type="text"
-                                name="bNo"
-                                value={board.bNo}
-                                onChange={onChange} />
-                            </td>
-                        </tr>
                         <tr>
                             <td>회원이메일</td>
                             <td><input
@@ -80,15 +65,6 @@ function BoardInsert(props) {
                                 type="text"
                                 name="bContent"
                                 value={board.bContent}
-                                onChange={onChange} />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>작성일</td>
-                            <td><input
-                                type="text"
-                                name="bWriteDate"
-                                value={board.bWriteDate}
                                 onChange={onChange} />
                             </td>
                         </tr>

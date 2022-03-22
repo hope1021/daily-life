@@ -1,6 +1,6 @@
 .card {
     background-color: black;
-    color: white;
+    color: black;
     width: 250px;
     padding: 20px;
     height: 320px;
@@ -11,7 +11,6 @@
 .union {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    background-color: white;
     margin: 20px;
+    background-size: cover;
 }
