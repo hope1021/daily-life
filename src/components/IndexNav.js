@@ -70,28 +70,38 @@ function IndexNav() {
         }
     };
 
+    function loginCheckHB(e){
+        console.log(login)
+        if(login == null) {
+            alert("로그인 후 진행해 주세요")
+        }
+        else {
+            window.location.href = "/HBList"
+        }
+    };
 
-  return (
+
+    return (
     <>
       {/* <nav className={`navbar ${show && 'scrollNav'}`}> */}
-      <nav className='navbar'>
+        <nav className='navbar'>
             <div className = 'navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                 DAILY-LIFE
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
-                  <label>
+                    <label>
                     {click ? <FaTimes /> : <FaBars />}
-                  </label>
+                    </label>
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick = {closeMobileMenu}>
+                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                             홈
                         </Link>
                     </li>
                     <li className='nav-item'>
-                    <Link to='IntroduceIcon' className='nav-links' onClick = {closeMobileMenu}>
+                    <Link to='IntroduceIcon' className='nav-links' onClick={closeMobileMenu}>
                         소개
                     </Link>
                     </li>
@@ -99,15 +109,17 @@ function IndexNav() {
                         <a className='nav-links' onClick={loginCheck}>
                             글쓰기
                         </a>
-
                     </li>
                     <li className='nav-item'>
-                        <Link to='HBOpen' className='nav-links' onClick = {closeMobileMenu}>
+                        <Link to='HBList' className='nav-links' onClick={ () => {
+                                                                    closeMobileMenu()
+                                                                    loginCheckHB()
+                                                                }}>
                             행복저금통
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='Login' className='nav-links-mobile' onClick = {closeMobileMenu}>
+                        <Link to='Login' className='nav-links-mobile' onClick={closeMobileMenu}>
                             로그인
                         </Link>
                     </li>
@@ -120,13 +132,10 @@ function IndexNav() {
                         }}>로그아웃</Button></Link>
                     : button && <Button buttonStyle='btn--outline'>로그인</Button>
                 }
-
-
             </div>
         </nav>
         </>
     );
 }
-  
 
 export default IndexNav

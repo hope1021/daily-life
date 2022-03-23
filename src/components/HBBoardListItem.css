@@ -1,15 +1,15 @@
 .hbBoardListItem {
-  width: 811px;
-  height: 130px;
+  width: 340px;
+  height: 415px;
   display: inline-block;
+  margin: 5px;
   margin: 13px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px 1px #e2e2e2;
-  transition: all 0.6s;
+  border-radius: 7px;
+  box-shadow: 6px 7px 5px 1px #e7e7e7;
 }
 
 .hbBoardListItem:hover {
-  box-shadow: 2px 2px 5px 1px #d4d1d1;
+  box-shadow: 6px 7px 5px 1px #d4d1d1;
 }
 
 .hbBoardListItem * {
@@ -20,53 +20,39 @@
   width: 100%;
   color: black;
   overflow: hidden;
+  padding-top: 65px;
   transition: all 0.4s;
-  background: white;
-  border-radius: 10px;
 }
-
 .hbFeelIcon {
-  height: 130px;
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-  width: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 170px;
 }
-
 .hbFeelIcon > img {
-  height: 110px;
+  height: 130px;
+  margin-top: 30px;
 }
-
 .hbContents {
   height: 250px;
-  /* opacity: 0; */
+  padding: 27px 30px 0 30px;
 }
-
 .hbTitle > h3 {
-  font-size: 17px;
+  font-size: 20px;
 }
-
-/* .hbBoardListItem:hover .hbBoardItem {
-  padding-top: 20px;
+.hbText {
+  margin: 23px 0;
+  height: 100px;
+  opacity: 0;
+}
+.hbInfo {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+}
+.hbBoardListItem:hover .hbText,
+.hbBoardListItem:hover .hbInfo {
+  opacity: 1;
   transition: all 0.6s;
 }
-
-.hbBoardListItem:hover .hbContents {
-  opacity: 1;
-} */
-
-.modal {
-  position: absolute;
-  inset: 40px;
-  border: 1px solid rgb(204, 204, 204);
-  background: rgb(255, 255, 255);
-  overflow: auto;
-  border-radius: 4px;
-  outline: none;
-  padding: 20px;
-  width: 200px;
-  height: 200px;
-  top: 180px;
+.hbBoardListItem:hover .hbBoardItem {
+  padding-top: 0px;
+  transition: all 0.6s;
 }

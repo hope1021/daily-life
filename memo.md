@@ -172,6 +172,7 @@
       jihodaddy : 글쓰기 관련 정보 수집 및 테스트, 모달창, Nav바 어떻게 할지, 행복 저금통 구현에 참여, member 백엔드
       roditee   : DB 테이블 생성 및 테스트 데이터 삽입
                 : 일반 게시글 / 행복 저금통 게시글 CRUD backend (Spring - React 연동 및 기능 구현 완료)
+                : 닉네임/기분타입/기분아이콘이미지/저금통이름/이미지경로명/이미지 연결
       hyov_vely : 로그인 회원가입 폼 제작
       HANGYESUK : 메인 화면에 카드 배치, 버튼, 회원가입
 ```
@@ -198,7 +199,7 @@
       jihodaddy :
       roditee   :
       hyov_vely : 회원가입 프론트
-      HANGYESUK : 메인페이지의 일반게시글
+      HANGYESUK : 메인페이지의 일반게시글, 게시글 기분에 따라 배경색 바뀌는 기능
 ```
 
 <hr>
@@ -210,7 +211,7 @@
 ```
       hope1021  : React 행복 저금통 코드 작성
       jihodaddy : 로그인, 로그인 시 다른화면 유지
-      roditee   : 아이콘 이미지 띄우기
+      roditee   : 저금통게시글 목록 페이지, 게시글/행복저금통게시글 상세 페이지, 기분 아이콘 소개 페이지
       hyov_vely : 회원가입 프론트, 유효성검사
       HANGYESUK : 메인페이지의 일반게시글(데이터 출력 잘되는지 확인하고, CSS, 버튼?)
 
@@ -237,9 +238,9 @@
 ```
       hope1021  :
       jihodaddy :
-      roditee   :
+      roditee   : 게시글 목록 페이지, indexNav
       hyov_vely :
-      HANGYESUK :
+      HANGYESUK : 로그인 리덕스, 수정 삭제(본인 아이디만), 글쓰기 제한(로그인), Nav바 애니메이션
 
 ```
 

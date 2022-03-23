@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams,Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './BoardDetail.css';
 import { useSelector } from 'react-redux';

@@ -1,22 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './HBBoardListItem.css';
-
 const HBBoardListItem = (props) => {
-
     let history = useNavigate();
     
     const cutText = (string, n) => {
         return string?.length > n ? string.substr(0, n) + "..." : string;
     }
-
     var sliceBRD = props.hb_board.hb_bWriteDate.slice(0,10);
-
     let bgColor = {
         background: bgColorCheck(props.hb_board.feelNo)
     }
-
     function bgColorCheck(feelNo) {
         if(feelNo === 1) {
             return "#f7f09b"
@@ -52,26 +47,29 @@ const HBBoardListItem = (props) => {
             return "linear-gradient(#fff9c9, #ffccb4)"
         }
     }
-
     return (
-        <div className='hbBoardListItem'>
+        <div className='hbBoardListItem' style={bgColor}>
             <Link to={"/hbBoardDetail/" + props.hb_board.hb_bNo}>
                 <div className='hbBoardItem'>
-                    <div className='hbFeelIcon' style={bgColor}>
-                        <img className="feelIcon" alt="기분아이콘" src={`img/${props.hb_board.feelIcon}`} />
+                    <div className='hbFeelIcon'>
+                    <img className="feelIcon" alt="기분아이콘" src={`img/${props.hb_board.feelIcon}`} />
                     </div>
                     <div className='hbContents'>
                         <div className='hbTitle'>
-                            <h3>{cutText(props.hb_board.hb_bTitle, 7)}</h3>
+                            <h3>{cutText(props.hb_board.hb_bTitle, 13)}</h3>
                         </div>
                         <div className='hbText'>
-                            <h3>{cutText(props.hb_board.hb_bContent, 100)}</h3>
+                            <p>{cutText(props.hb_board.hb_bContent, 95)}</p>
                         </div>
+                        <div className='hbInfo'>
+                            <p>{sliceBRD}</p>
+                            <p>{props.hb_board.feelType}</p>
+                        </div>
+
                     </div>
                 </div>
             </Link>
         </div>
     );
 };
-
 export default HBBoardListItem;

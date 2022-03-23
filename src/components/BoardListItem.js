@@ -2,10 +2,9 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './BoardListItem.css';
+import { useSelector } from 'react-redux';
 
 function BoardListItem(props) {
-
-    let history = useNavigate();
 
     const cutText = (string, n) => {
         return string?.length > n ? string.substr(0, n) + "..." : string;
@@ -53,21 +52,6 @@ function BoardListItem(props) {
         }
     }
 
-    const onDeleteItem = () => {
-        if (window.confirm("선택한 게시글을 삭제하시겠습니까?")) {
-            axios.get('http://localhost:8080/boardDelete/' + props.board.bNo)
-                .then(
-                    () => {
-                        history('/');
-                        window.location.reload();
-                        // reload 하지 않으면
-                        // DB에서는 삭제되지만 현재 화면은 안 바뀜
-                        // 삭제한 내용을 화면에 바로 반영하기 위해서 reload 추가
-                    }
-                ).catch(err => console.log(err));
-        }
-    }
-
     console.log(props.board.feelIcon)
 
 
@@ -83,13 +67,10 @@ function BoardListItem(props) {
                             <h3>{cutText(props.board.bTitle, 25)}</h3>
                             <div className='bWriterInfo'>
                                 <h5>by&nbsp;{props.board.memNick}</h5>
-                                <h5>by&nbsp;{props.board.memEmail}</h5> {/* 이메일 */}
                             </div>
                         </div>
                         <div className='bText'>
                             <p>{cutText(props.board.bContent, 133)}</p>
-                            <Link to={"/boardUpdate/" + props.board.bNo}>수정</Link>
-                    <button onClick={onDeleteItem}>삭제</button>
                         </div>
                     </div>
                 </div>

@@ -45,13 +45,13 @@
   text-align: center;
 }
 
-table {
+.frmHBCreateForm table {
   margin: auto;
   padding-top: 3px;
   padding-bottom: 150px;
 }
 
-td {
+.frmHBCreateForm td {
   width: 90px;
 }
 

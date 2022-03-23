@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './BoardInsert.css';
+import { useSelector } from 'react-redux';
 
 function BoardInsert(props) {
     let history = useNavigate();
+
+    // email
+    const state = useSelector((state)=>state)
+    const loginEmail = state.loginReducer
 
     //state
     const [board, setBoard] = useState({
@@ -48,9 +53,9 @@ function BoardInsert(props) {
                                 type="text"
                                 name="memEmail"
                                 className='memEmailInput'
-                                value={board.memEmail}
+                                value={loginEmail}
                                 onChange={onChange}
-                                 />
+                                />
                                 
                             </td>
                         </tr>

@@ -49,7 +49,7 @@ function Join() {
         console.log(frmData)
 
 
-        axios.post('http://localhost:8080/userJoin', frmData)
+        axios.post('http://localhost:8080/join', frmData)
             .then(
                 response => {
                     alert("등록 완료");
@@ -99,7 +99,7 @@ function check(){
         setTimeout(() => {
             label.classList.remove('warning2')
         }, 1500)
-     } 
+    } 
   })
 }
 
@@ -116,7 +116,7 @@ function check2(){
         setTimeout(() => {
             label.classList.remove('warning2')
         }, 1500)
-     } else if(pw2.value == pw.value) {
+    } else if(pw2.value == pw.value) {
       label = pw2.nextElementSibling
       label.classList.add('warning3')
       setTimeout(() => {
@@ -150,7 +150,7 @@ function check2(){
                       <div className='joinBoxTitle'></div>
                       <div className='int-area'>
                         <input type='password' id='pw' className='pw' maxLength='30' name='memPw' onChange={onChange} value={member.memPw} autoComplete='off' required/>
-                           <label for='pw'>비밀번호</label>
+                          <label for='pw'>비밀번호</label>
                       </div>
 
                       {/* 비밀번호 */}
@@ -170,8 +170,8 @@ function check2(){
                       </div>
 
                        {/* 자기소개 */}
-                       <div className='joinBoxTitle'></div>
-                       <div className='int-area'>
+                        <div className='joinBoxTitle'></div>
+                        <div className='int-area'>
                         <input type='text'  className='memInfo' maxLength='100' name='memInfo' value={member.memInfo} onChange={onChange} autoComplete='off' required/>
                         <label for='pw'>자기소개</label>
                       </div>
@@ -188,7 +188,7 @@ function check2(){
 
                   <div>
                     <button className='btn2' id="btn" name='JoinSubmit' type="submit" onClick={check}>가입하기</button>
-                 </div>
+                </div>
             </div>
 
         

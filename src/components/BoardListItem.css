@@ -1,11 +1,12 @@
 .boardListItem {
   width: 870px;
   height: 200px;
-  display: inline-block;
-  margin: 13px;
+  display: block;
+  margin: 13px auto;
   border-radius: 7px;
   box-shadow: 2px 2px 5px 1px #e7e7e7;
   background: white;
+  max-width: 900px;
 }
 
 .boardListItem * {

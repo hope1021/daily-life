@@ -4,6 +4,16 @@ import './IntroduceIcon.css';
 const IntroduceIcon = () => {
     return (
         <div className='iconBox'>
+            <div className='dailyLifeIntro'>
+                <h3>Daily-Life ?</h3>
+                <p> 나의 중요했던 일이나 경험, 느낌을 간단하게 작성해서 <br/>
+                    하루를 의미있게 보낼 수 있도록 기록하는 웹 사이트 입니다.</p>
+                    <img src='img/intro1.png'/>
+                    
+                <h3>Daily-Life 핵심 기능</h3>
+                     <img src='img/intro2.png'/>
+
+            </div>
             <h3>Daily-Life의 기분이들을 소개합니다.</h3>
             <div className='iconRow'>
                 <div className='iconItemImg'>

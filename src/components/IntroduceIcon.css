@@ -51,3 +51,20 @@
 .iconDetail {
   padding-top: 12px;
 }
+
+.dailyLifeIntro > h3 {
+  font-size: xx-large;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.dailyLifeIntro > p {
+  padding-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.dailyLifeIntro > img {
+  width: 58%;
+  margin-bottom: 180px;
+}

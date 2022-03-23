@@ -6,7 +6,6 @@ import './BoardList.css';
 import { useSelector } from 'react-redux';
 
 function BoardList() {
-  
 
   // state
   const [data, setData] = useState([]);
