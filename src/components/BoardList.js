@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BoardListItem from './BoardListItem'
 import './BoardList.css';
+import { useSelector } from 'react-redux';
 
 function BoardList() {
-
   
 
   // state

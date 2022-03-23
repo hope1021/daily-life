@@ -4,13 +4,17 @@ import {Button} from './Button';
 import './IndexNav.css';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
+import Login from './Login';
 
 function IndexNav() {
 
     const state = useSelector((state)=>state)
     const dispatch = useDispatch();
 
-    console.log(state)
+    
+    const login = state.loginReducer
+    console.log(login)
+
 
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
@@ -41,7 +45,6 @@ function IndexNav() {
   
 
     const scrollNavbar = ()=>{
-        console.log(window.scrollY)
         let scroll = parseInt(window.scrollY)
         if(scroll > 0) {
         show2(true)
@@ -55,6 +58,17 @@ function IndexNav() {
         window.addEventListener('scroll', scrollNavbar)
         return ()=>window.removeEventListener("scroll", scrollNavbar)
     }, [show])
+
+
+    function loginCheck(e){
+        console.log(login)
+        if(login == null) {
+            alert("로그인 후 진행해 주세요")
+        }
+        else {
+            window.location.href = "/BoardInsert"
+        }
+    };
 
 
   return (
@@ -82,9 +96,10 @@ function IndexNav() {
                     </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='BoardInsert' className='nav-links' onClick = {closeMobileMenu}>
+                        <a className='nav-links' onClick={loginCheck}>
                             글쓰기
-                        </Link>
+                        </a>
+
                     </li>
                     <li className='nav-item'>
                         <Link to='HBOpen' className='nav-links' onClick = {closeMobileMenu}>
@@ -99,8 +114,9 @@ function IndexNav() {
                 </ul>
                 {
                     state.loginCheckReducer == 'true'
-                    ? button && <Link to='/home'><Button buttonStyle='btn--outline' onClick={()=>{
+                    ? button && <Link to='/'><Button buttonStyle='btn--outline' onClick={()=>{
                             dispatch({type: "logout"})
+                            window.location.href = "/"
                         }}>로그아웃</Button></Link>
                     : button && <Button buttonStyle='btn--outline'>로그인</Button>
                 }

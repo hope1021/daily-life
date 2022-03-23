@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './BoardDetail.css';
+import { useSelector } from 'react-redux';
 
 const BoardDetail = (props) => {
 
+
+    const state = useSelector((state)=>state)
+
+    const login = state.loginReducer
+    console.log(login)
+
     // 파라미터로 받아 온 값
     const { bNo } = useParams();
+
+    let history = useNavigate();
 
     //state
     const [board, setBoard] = useState({
@@ -57,6 +66,21 @@ const BoardDetail = (props) => {
         background: bgColorCheck(board.feelNo)
     }
 
+    const onDeleteItem = () => {
+        if (window.confirm("선택한 게시글을 삭제하시겠습니까?")) {
+            axios.get('http://localhost:8080/boardDelete/' + props.board.bNo)
+                .then(
+                    () => {
+                        history('/');
+                        window.location.reload();
+                        // reload 하지 않으면
+                        // DB에서는 삭제되지만 현재 화면은 안 바뀜
+                        // 삭제한 내용을 화면에 바로 반영하기 위해서 reload 추가
+                    }
+                ).catch(err => console.log(err));
+        }
+    }
+
     function bgColorCheck(feelNo) {
         if(feelNo === 1) {
             return "#f7f09b"
@@ -102,6 +126,12 @@ const BoardDetail = (props) => {
                 <div className='bBInfo'>
                     by {board.memNick}&nbsp;&nbsp;|&nbsp;&nbsp;{board.bWriteDate}
                 </div>
+                {
+                    login == board.memEmail
+                    ? <div><Link to={"/boardUpdate/" + board.bNo}>수정</Link>
+                        <button onClick={onDeleteItem}>삭제</button></div>
+                    : null
+                }
             </div>
             <div className='bBContent'>
                 {board.bContent}
