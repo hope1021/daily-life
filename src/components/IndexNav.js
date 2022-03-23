@@ -71,6 +71,11 @@ function IndexNav() {
                         </Link>
                     </li>
                     <li className='nav-item'>
+                    <Link to='IntroduceIcon' className='nav-links' onClick = {closeMobileMenu}>
+                        소개
+                    </Link>
+                    </li>
+                    <li className='nav-item'>
                         <Link to='BoardInsert' className='nav-links' onClick = {closeMobileMenu}>
                             글쓰기
                         </Link>

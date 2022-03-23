@@ -10,7 +10,7 @@ function Join() {
 
   let [email, setEmail] = useState("");
   let [emailText, setEmailText] = useState("");
-
+  
   // state
   const [member, setMember] = useState({
     memEmail: '',
