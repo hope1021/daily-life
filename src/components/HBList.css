@@ -1,0 +1,83 @@
+section {
+  padding: auto;
+}
+.AllHBList {
+  padding-left: 15%;
+}
+
+.hb {
+  width: 250px;
+  height: 300px;
+  float: left;
+
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  padding-top: 130px;
+  padding-right: 50px;
+
+  background-image: url("/public/img/fullHB.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 세션에 있는 h1만 조절 */
+section h1 {
+  padding-top: 15px;
+}
+
+/* 브랜드 명 */
+h5 {
+  padding-bottom: 7px;
+  color: gray;
+}
+
+/* 저금통 이름 */
+h4 {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: rgb(0, 0, 0);
+}
+
+/* 개봉날짜 */
+p {
+  font-size: 12px;
+  padding-bottom: 80px;
+}
+
+/* 애니메이션 */
+.hb:hover {
+  animation-name: tossing;
+  -webkit-animation-name: tossing;
+
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes tossing {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+@-webkit-keyframes tossing {
+  0% {
+    -webkit-transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(4deg);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
+import './HBList.css';
 
 // 한 행
 function HBListItem(props) {
@@ -18,16 +19,17 @@ function HBListItem(props) {
     //     }
     // }
 
+
     return (
-        <tr>
-            <td>{props.HB.hbNo}</td>
-            <td>{props.HB.hbName}</td>
-            <td>{props.HB.hbStartDate}</td>
-            <td>{props.HB.hbEndDate}</td>
-            <td>{props.HB.memEmail}</td>
-            <td><Link to={"/HBUpdate/" + props.HB.hbNo}>수정</Link></td>
-            {/* <td><button onClick={onDeleteItem}>삭제</button></td> */}
-        </tr>
+        <Link to={"/HBUpdate/" + props.HB.hbNo}>
+        <div className="hb">
+            <h5>daily-Life</h5>
+            {/* <tr>{props.HB.hbNo}</tr> */}
+            <h4>{props.HB.hbName}</h4>
+            {/* <tr>{props.HB.hbStartDate}</tr> */}
+            <p>{props.HB.hbEndDate}</p>
+            {/* <tr>{props.HB.memEmail}</tr> */}
+        </div></Link>
     );
 }
 

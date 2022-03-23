@@ -53,25 +53,58 @@ const BoardDetail = (props) => {
         loadData();
     }, []);
 
+    let bgColor = {
+        background: bgColorCheck(board.feelNo)
+    }
+
+    function bgColorCheck(feelNo) {
+        if(feelNo === 1) {
+            return "#f7f09b"
+        }
+        else if(feelNo === 2) {
+            return "#f9d4ea"
+        }
+        else if(feelNo === 3) {
+            return "#bad8e2"
+        }
+        else if(feelNo === 4) {
+            return "#93d4aa"
+        }
+        else if(feelNo === 5) {
+            return "#b09f85"
+        }
+        else if(feelNo === 6) {
+            return "#b7bee5"
+        }
+        else if(feelNo === 7) {
+            return "#c5b0d5"
+        }
+        else if(feelNo === 8) {
+            return "#cdcdcd"
+        }
+        else if(feelNo === 9) {
+            return "#f9d2c7"
+        }
+        else if(feelNo === 10) {
+            return "#ecbebe"
+        }
+        else if(feelNo === 11) {
+            return "linear-gradient(#fff9c9, #ffccb4)"
+        }
+    }
+
     return (
         <div>
-            {/* 글 번호 : {bNo}<br/> */}
-            {/* 작성자 이메일 : {board.memEmail}<br/> */}
-            {/* 기분번호 : {board.feelNo}<br/> */}
-            {/* 기분아이콘 파일명{board.feelIcon}<br/> */}
-            {/* {feelIconImg} */}
-            {/* <img src={require('../img/glad.png')}/> */}
-            {/* 기분 : {board.feelType}<br/> */}
-            <div className='bTitleBox'>
-                <div className='bTitle'>
+            <div className='bBTitleBox' style={bgColor}>
+                <div className='bBTitle'>
                     <h1>"{board.bTitle}"</h1>
                 </div>
-                <div className='bInfo'>
+                <div className='bBInfo'>
                     by {board.memNick}&nbsp;&nbsp;|&nbsp;&nbsp;{board.bWriteDate}
                 </div>
             </div>
-            <div className='bContent'>
-                {board.bContent}<br/>
+            <div className='bBContent'>
+                {board.bContent}
             </div>
         </div>
     );

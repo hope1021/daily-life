@@ -1,15 +1,15 @@
-.bTitleBox {
+.bBTitleBox {
   background: #fff7b0;
   height: 350px;
   position: relative;
 }
 
-.bTitle > h1 {
+.bBTitle > h1 {
   font-weight: 600;
   font-size: 40px;
 }
 
-.bTitle {
+.bBTitle {
   width: 900px;
   position: absolute;
   top: 50%;
@@ -17,7 +17,7 @@
   text-align: left;
 }
 
-.bInfo {
+.bBInfo {
   font-size: 16px;
   width: 400px;
   display: inline-block;
@@ -27,10 +27,12 @@
   text-align: left;
 }
 
-.bContent {
+.bBContent {
   width: 900px;
   margin: 0 auto;
   padding: 60px 0;
   font-size: 18px;
   line-height: 35px;
+  position: absolute;
+  left: 25%;
 }

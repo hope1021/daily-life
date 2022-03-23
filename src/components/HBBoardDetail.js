@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import './HBBoardDetail.css';
 
 const HBBoardDetail = () => {
 
@@ -29,12 +30,12 @@ const HBBoardDetail = () => {
         setLoading(true);
         const response = await axios.get('http://localhost:8080/hbBoardDetail/' + hb_bNo);
         // console.log(response.data);
+        var sliceBRD = response.data.hb_bWriteDate.slice(0,10);
         setHBBoard({
-            // hb_bNo: response.data.hb_bNo,
             memEmail: response.data.memEmail,
             hb_bTitle: response.data.hb_bTitle,
             hb_bContent: response.data.hb_bContent,
-            hb_bWriteDate: response.data.hb_bWriteDate,
+            hb_bWriteDate: sliceBRD,
             feelNo: response.data.feelNo,
             hbNo: response.data.hbNo,
             memNick: response.data.memNick,
@@ -50,21 +51,63 @@ const HBBoardDetail = () => {
         loadData();
     }, []);
 
+    let bgColor = {
+        background: bgColorCheck(hb_board.feelNo)
+    }
+
+    function bgColorCheck(feelNo) {
+        if(feelNo === 1) {
+            return "#f7f09b"
+        }
+        else if(feelNo === 2) {
+            return "#f9d4ea"
+        }
+        else if(feelNo === 3) {
+            return "#bad8e2"
+        }
+        else if(feelNo === 4) {
+            return "#93d4aa"
+        }
+        else if(feelNo === 5) {
+            return "#b09f85"
+        }
+        else if(feelNo === 6) {
+            return "#b7bee5"
+        }
+        else if(feelNo === 7) {
+            return "#c5b0d5"
+        }
+        else if(feelNo === 8) {
+            return "#cdcdcd"
+        }
+        else if(feelNo === 9) {
+            return "#f9d2c7"
+        }
+        else if(feelNo === 10) {
+            return "#ecbebe"
+        }
+        else if(feelNo === 11) {
+            return "linear-gradient(#fff9c9, #ffccb4)"
+        }
+    }
+
     return (
-        <div>
-            <h3>저금통 게시글 상세 정보 조회</h3>
-            글 번호 : {hb_bNo}<br/>
-            제목 : {hb_board.hb_bTitle}<br/>
-            내용 : {hb_board.hb_bContent}<br/>
-            기분번호 : {hb_board.feelNo}<br/>
-            기분타입 : {hb_board.feelType}<br/>
-            작성자이메일 : {hb_board.memEmail}<br/>
-            작성자닉네임 : {hb_board.memNick}<br/>
-            작성일 : {hb_board.hb_bWriteDate}<br/>
-            행복저금통번호 : {hb_board.hbNo}<br/>
-            행복저금통이름 : {hb_board.hbName}<br/>
-            <hr/>
-        </div>
+            <div className='hbBDetailBox' style={bgColor}>
+                <div className='hbBDetailLine'>
+                    <div className='hbBTitle'>
+                        <h1>"{hb_board.hb_bTitle}"</h1>
+                    </div>
+                    <div className='hbBInfo'>
+                        '{hb_board.feelType}'&nbsp;이 가득했던 날&nbsp;|&nbsp;&nbsp;{hb_board.hb_bWriteDate}
+                    </div>
+                    <div className='hbBContentBox'>
+                        <p className='hbBContent'>{hb_board.hb_bContent}</p>
+                    </div>
+                    <div className='hbBankInfo'>
+                        {hb_board.hbName}
+                    </div>
+                </div>
+            </div>
     );
 };
 

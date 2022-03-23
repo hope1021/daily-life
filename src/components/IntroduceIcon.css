@@ -1,0 +1,53 @@
+.iconBox {
+  background: #f5eaea;
+  padding-bottom: 23px;
+}
+
+.iconBox img {
+  width: 140px;
+}
+
+.iconBox > h3 {
+  font-size: 32px;
+  padding: 40px 0;
+}
+
+.iconRow {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1300px;
+  margin: 27px auto 10px auto;
+}
+
+.txtRow {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1300px;
+  margin: 0 auto 50px auto;
+}
+
+.iconTxtBox {
+  width: 153px;
+}
+
+.iconItemImg {
+  width: 150px;
+  height: 150px;
+}
+
+.iconItemImg:hover > img {
+  filter: drop-shadow(2px 4px 6px #adadad);
+  transition: all 0.4s;
+  width: 142px;
+  animation: bounce 0.3s ease infinite alternate;
+}
+
+@keyframes bounce {
+  100% {
+    margin-top: -5px;
+  }
+}
+
+.iconDetail {
+  padding-top: 12px;
+}

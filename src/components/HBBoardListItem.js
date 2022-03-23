@@ -64,11 +64,11 @@ const HBBoardListItem = (props) => {
                             <h3>{cutText(props.hb_board.hb_bTitle, 13)}</h3>
                         </div>
                         <div className='hbText'>
-                            <p>{cutText(props.hb_board.hb_bContent, 100)}</p>
+                            <p>{cutText(props.hb_board.hb_bContent, 95)}</p>
                         </div>
                         <div className='hbInfo'>
-                            <p className='hbBRD'>{sliceBRD}</p>
-                            <p className='hbFT'>{props.hb_board.feelType}</p>
+                            <p>{sliceBRD}</p>
+                            <p>{props.hb_board.feelType}</p>
                         </div>
                         
                     </div>

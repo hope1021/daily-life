@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Top from './IndexTop';
-import Bottom from './IndexBottom';
 import HBListItem from './HBListItem';
+
 
 function HBList(props) {
 
@@ -28,36 +27,16 @@ function HBList(props) {
 
     return (
         <div id='wrap'>
-
-            <Top></Top>
-
             <section>
                 <h1>행복 저금통 목록</h1>
-                    <div id='AllHBList'>
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th>번호</th>
-                                <th>이름</th>
-                                <th>생성날짜</th>
-                                <th>종료날짜</th>
-                                <th>만든이</th>
-                                
-                                <th>수정</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                HBDate.map(function (HB, i) {
-                                    return <HBListItem HB={HB} key={i} />
-                                })
-                            }
-                        </tbody>
-                    </table>
+                    <div className='AllHBList'>
+                    {
+                        HBDate.map(function (HB, i) {
+                            return <HBListItem HB={HB} key={i} />
+                        })
+                    }
                     </div>
             </section>
-
-            <Bottom></Bottom>
         </div>
     );
 }
