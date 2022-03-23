@@ -18,18 +18,21 @@ function HBListItem(props) {
     //             ).catch(err => console.log(err));
     //     }
     // }
-
-
+ 
     return (
-        <Link to={"/HBUpdate/" + props.HB.hbNo}>
+        <Link to={"/HBBoardList"}>
         <div className="hb">
-            <h5>daily-Life</h5>
+            <h5>Daily-Life</h5>
             {/* <tr>{props.HB.hbNo}</tr> */}
             <h4>{props.HB.hbName}</h4>
             {/* <tr>{props.HB.hbStartDate}</tr> */}
             <p>{props.HB.hbEndDate}</p>
             {/* <tr>{props.HB.memEmail}</tr> */}
-        </div></Link>
+            <div className="btnDiv">
+            <Link to={"/HBUpdate/" + props.HB.hbNo}><input type="submit" className='btn1' value="수정" /></Link>
+        </div>
+        </div>
+        </Link>
     );
 }
 

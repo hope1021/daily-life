@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './HBUpdate.css';
 
 const HBUpdate = () => {
     let history = useNavigate();
@@ -65,7 +66,7 @@ const HBUpdate = () => {
     }
 
     return (
-        <div>
+        <div className='hbUp'>
             <h3>저금통 정보 수정</h3>
             <form name="frmHBUpdate" onSubmit={onSubmit} onReset={onReset}>
 
@@ -77,9 +78,9 @@ const HBUpdate = () => {
                 {/* <input type='hidden' name='hbEndDate' value={HB.hbEndDate} />
                 <input type='hidden' name='memEmail' value={HB.memEmail} /> */}
 
-
-                <input type="submit" value="수정" /> &nbsp;
-                <input type="reset" value="취소" />
+                <br/>
+                <input type="submit" className='btn1' value="수정" /> &nbsp;
+                <input type="reset" className='btn2' value="취소" />
             </form>
 
         </div>

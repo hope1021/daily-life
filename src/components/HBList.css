@@ -1,19 +1,14 @@
 section {
   padding: auto;
-}
-.AllHBList {
-  padding-left: 15%;
+  background-color: #fefff9;
 }
 
 .hb {
   width: 250px;
   height: 300px;
-  float: left;
+  display: inline-block;
 
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 50px;
+  margin: 50px;
   padding-top: 130px;
   padding-right: 50px;
 
@@ -28,22 +23,34 @@ section h1 {
 }
 
 /* 브랜드 명 */
-h5 {
+.hb > h5 {
   padding-bottom: 7px;
   color: gray;
 }
 
 /* 저금통 이름 */
-h4 {
+.hb > h4 {
   padding-top: 15px;
   padding-bottom: 10px;
   color: rgb(0, 0, 0);
 }
 
 /* 개봉날짜 */
-p {
+.hb > p {
   font-size: 12px;
   padding-bottom: 80px;
+  color: #daa37c;
+}
+
+.btn1 {
+  width: 200px;
+  height: 50px;
+  border: 0;
+  font-size: 25px;
+  border-radius: 5px;
+  background: #f6a89e;
+  color: white;
+  font-weight: 500;
 }
 
 /* 애니메이션 */

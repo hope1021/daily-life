@@ -1,0 +1,38 @@
+.hbUp {
+  padding: auto;
+  background-color: #fefff9;
+}
+
+.hbUp input[type="text"] {
+  width: 420px;
+  height: 100px;
+  border: 0;
+  box-shadow: 0px 0px 4px 3px #f4f4f4;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.hbUp .btn1 {
+  width: 200px;
+  height: 100px;
+  border: 0;
+  font-size: 45px;
+  border-radius: 5px;
+  background: #f6a89e;
+  color: white;
+  font-weight: 500;
+}
+
+.hbUp .btn2 {
+  display: inline; /*옆으로 같이 나오게*/
+  width: 200px;
+  height: 100px;
+  border: 0;
+  font-size: 45px;
+  border-radius: 5px;
+  background: #cfcfcf;
+  color: white;
+  font-weight: 500;
+}
