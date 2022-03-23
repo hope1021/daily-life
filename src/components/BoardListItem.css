@@ -1,16 +1,70 @@
 .boardListItem {
-  width: 300px;
-  height: 500px;
-  background-color: rgb(184, 184, 184);
+  width: 340px;
+  height: 415px;
   display: inline-block;
-  margin: 5px;
+  margin: 13px;
+  border-radius: 7px;
+  box-shadow: 6px 7px 5px 1px #e7e7e7;
 }
 
 .boardListItem * {
   text-decoration: none;
 }
+
+.boardListItem:hover {
+  box-shadow: 6px 7px 5px 1px #d4d1d1;
+}
+
 .boardItem {
   height: 100%;
   width: 100%;
-  color: white;
+  color: black;
+  overflow: hidden;
+  padding-top: 65px;
+  transition: all 0.4s;
+}
+
+.bFeelIcon {
+  height: 170px;
+}
+
+.bFeelIcon > img {
+  height: 130px;
+  margin-top: 30px;
+}
+
+.bContents {
+  height: 250px;
+  padding: 27px 30px 0 30px;
+}
+
+.bTitle > h3 {
+  font-size: 20px;
+}
+
+.bText {
+  margin: 9px 0 33px 0;
+  height: 68px;
+  /* opacity: 0; */
+  display: flex;
+  align-items: center;
+}
+
+.bWriterInfo {
+  /* opacity: 0; */
+  padding: 10px;
+}
+
+.bDateInfo {
+}
+
+.boardListItem:hover .bText,
+.boardListItem:hover .bWriterInfo {
+  opacity: 1;
+  transition: all 0.6s;
+}
+
+.boardListItem:hover .boardItem {
+  padding-top: 0px;
+  transition: all 0.6s;
 }

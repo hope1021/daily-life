@@ -4,10 +4,30 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+
+let login = "HelloWorld!";
+
+function loginReducer(state=login, action) {
+  console.log(action.payload)
+  if(action.type === "login") {
+    login = action.payload
+    return login
+  }
+  return login;
+}
+
+
+let store = createStore(loginReducer);
+
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </BrowserRouter>,
   document.getElementById('root')
 );

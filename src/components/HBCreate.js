@@ -58,17 +58,18 @@ const HBCreate = () => {
       <section className='section2'>
 
 
-
-      <h1 className='h1title'><span>나</span><span>만</span><span>의</span> <span>행</span><span>복</span><span> </span><span>저</span><span>금</span><span>통</span><span> </span><span>만</span><span>들</span><span>기</span></h1>
-        
+   <div className='cardTitle'>
+      <h1><span>나</span><span>만</span><span>의</span> <span>행</span><span>복</span><span> </span><span>저</span><span>금</span><span>통</span><span> </span><span>만</span><span>들</span><span>기</span></h1>
+      </div>
 
       <div class="card">
         
-            <div class="imgBx">
-            <img src='img/pig1.png'/>
+            <div class="imgBox">
+            <img src='img/wjrmaxhd.gif'/>
+            <div className='haha'>Daily-life</div>
             </div>
             <div class="details">
-                <form name='frmHBCreateForm' onSubmit={onSubmit} onReset={onReset}>
+                <form name='frmHBCreateForm' className='frmHBCreateForm' onSubmit={onSubmit} onReset={onReset}>
 
             <h3>저금통의 이름은 무엇인가요?</h3>
               <input type='text' name='hbName' className='hbName' value={HB.hbName} onChange={onChange} />

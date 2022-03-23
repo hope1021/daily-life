@@ -86,7 +86,15 @@ position: absolute; left: 10px; top:15px;
     font-size: 20px; color: #e7b510;
 }
 
-h3{
+.title > h3{
+    font-size: 38px;
+    font-weight: 400;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    color:#a96434;
+}
+
+.frmHBCreateForm > h3{
     font-size: 38px;
     font-weight: 400;
     padding-top: 25px;

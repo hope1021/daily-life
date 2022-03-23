@@ -90,12 +90,12 @@ h6{
     font-weight: 500;
 }
 
-img{
-    height: 600px;
-    margin-top: -70px;
+.imgBox > img{
+    height: 700px;
+    margin-top: 71px;
 }
 
-h3{
+.frmHBCreateForm > h3{
     font-size: 38px;
     font-weight: 400;
     padding-top: 25px;
@@ -109,4 +109,7 @@ h3{
 }
 
 
-
+.haha{
+    font-size: 67px;
+    margin-top: -318px;
+}

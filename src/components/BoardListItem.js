@@ -7,6 +7,52 @@ function BoardListItem(props) {
 
     let history = useNavigate();
 
+    const cutText = (string, n) => {
+        return string?.length > n ? string.substr(0, n) + "..." : string;
+    }
+
+    var sliceBRD = props.board.bWriteDate.slice(0,10);
+
+    let bgColor = {
+        background: bgColorCheck(props.board.feelNo)
+    }
+
+    function bgColorCheck(feelNo) {
+        if(feelNo === 1) {
+            return "#f7f09b"
+        }
+        else if(feelNo === 2) {
+            return "#f9d4ea"
+        }
+        else if(feelNo === 3) {
+            return "#bad8e2"
+        }
+        else if(feelNo === 4) {
+            return "#93d4aa"
+        }
+        else if(feelNo === 5) {
+            return "#b09f85"
+        }
+        else if(feelNo === 6) {
+            return "#b7bee5"
+        }
+        else if(feelNo === 7) {
+            return "#c5b0d5"
+        }
+        else if(feelNo === 8) {
+            return "#cdcdcd"
+        }
+        else if(feelNo === 9) {
+            return "#f9d2c7"
+        }
+        else if(feelNo === 10) {
+            return "#ecbebe"
+        }
+        else if(feelNo === 11) {
+            return "linear-gradient(#fff9c9, #ffccb4)"
+        }
+    }
+
     const onDeleteItem = () => {
         if (window.confirm("선택한 게시글을 삭제하시겠습니까?")) {
             axios.get('http://localhost:8080/boardDelete/' + props.board.bNo)
@@ -26,20 +72,30 @@ function BoardListItem(props) {
 
 
     return (
-        <div className='boardListItem'>
+        <div className='boardListItem' style={bgColor}>
             <Link to={"/boardDetail/" + props.board.bNo}>
                 <div className='boardItem'>
-                    <h3>(제목){props.board.bTitle}</h3>
-                    <p>(내용){props.board.bContent}</p>
-                    (기분번호){props.board.feelNo}<br/>
-                    (기분타입명){props.board.feelType}<br/>
-                    (기분아이콘 파일명){props.board.feelIcon}<br/>
-                    (작성자이메일){props.board.memEmail}<br/>
-                    (작성자닉네임){props.board.memNick}<br/>
-                    (작성일){props.board.bWriteDate}<br/>
-                    <Link to={"/boardUpdate/" + props.board.bNo}>수정</Link><br/>
-                    <button onClick={onDeleteItem}>삭제</button>
-                    <img className="feelIcon" alt="기분아이콘" src={`img/${props.board.feelIcon}`} />
+                    <div className='bFeelIcon'>
+                        <img className="feelIcon" alt="기분아이콘" src={`img/${props.board.feelIcon}`} />
+                    </div>
+                    <div className='bContents'>
+                        <div className='bTitle'>
+                            <h3>{cutText(props.board.bTitle, 13)}</h3>
+                        </div>
+                        <div className='bWriterInfo'>
+                            <h5>by&nbsp;{props.board.memNick}</h5>
+                        </div>
+                        <div className='bText'>
+                            <p>{cutText(props.board.bContent, 95)}</p>
+                        </div>
+                        <div className='bDateInfo'>
+                            <p>'{props.board.feelType}' 의 {sliceBRD}</p>
+                        </div>
+                        
+                    </div>
+
+                    {/* <Link to={"/boardUpdate/" + props.board.bNo}>수정</Link><br/>
+                    <button onClick={onDeleteItem}>삭제</button> */}
                 </div>
             </Link>
         </div>
