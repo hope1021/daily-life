@@ -65,8 +65,11 @@ const onSubmit = () => {
                 //console.log(response.data)
                 const result = response.data;
                 if (result === "success") {
+                  window.localStorage.setItem("memEmail", login.memEmail)
+                  window.localStorage.setItem("loginCheck", true)
                   dispatch({ type: "login", payload: login.memEmail })
                   alert("로그인 완료");
+                  window.location.href = "/home"
                 } else {
                   alert("로그인 실패")
                   }

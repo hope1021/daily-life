@@ -4,23 +4,44 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
 
-let login = "HelloWorld!";
+let login = window.localStorage.getItem("memEmail");
 
 function loginReducer(state=login, action) {
-  console.log(action.payload)
   if(action.type === "login") {
-    login = action.payload
     return login
+  }
+  else if(action.type === "logout") {
+    window.localStorage.removeItem("memEmail")
+    login = ""
+    return login;
   }
   return login;
 }
 
+let loginCheck = window.localStorage.getItem("loginCheck");
 
-let store = createStore(loginReducer);
+function loginCheckReducer(state=loginCheck, action) {
+
+  if(action.type === "login") {
+    loginCheck = true
+    return loginCheck
+  }
+  else if(action.type === "logout") {
+    window.localStorage.removeItem("loginCheck")
+    loginCheck = false
+    return loginCheck;
+  }
+
+  return loginCheck;
+
+}
+
+
+let store = createStore(combineReducers({loginReducer, loginCheckReducer}));
 
 
 ReactDOM.render(

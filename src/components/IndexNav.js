@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom';
 import {Button} from './Button';
 import './IndexNav.css';
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useDispatch, useSelector } from 'react-redux';
 
 function IndexNav() {
 
-  const [click, setClick] = useState(false);
+    const state = useSelector((state)=>state)
+    const dispatch = useDispatch();
+
+    console.log(state)
+
+    const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
 
@@ -91,7 +97,15 @@ function IndexNav() {
                         </Link>
                     </li>
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>로그인</Button>}
+                {
+                    state.loginCheckReducer == 'true'
+                    ? button && <Link to='/home'><Button buttonStyle='btn--outline' onClick={()=>{
+                            dispatch({type: "logout"})
+                        }}>로그아웃</Button></Link>
+                    : button && <Button buttonStyle='btn--outline'>로그인</Button>
+                }
+
+
             </div>
         </nav>
         </>
