@@ -1,0 +1,218 @@
+.joinAllForm {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.joinForm {
+    background: rgb(254 255 249);
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 905px;
+    box-shadow: 1px 1px 3px 2px #e2e2e2;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.email {
+    
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 30px;
+    color: #482727;
+    outline: none;
+}
+
+.password {
+    
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 30px;
+    color: #482727;
+    outline: none;
+
+}
+
+.password2 {
+    
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 30px;
+    color: #482727;
+    outline: none;
+
+    
+}
+
+
+.memNick{
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 30px;
+    color: #482727;
+    outline: none;
+}
+
+.memInfo{
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 30px;
+    color: #482727;
+    outline: none;
+}
+
+.email label{
+position: absolute; left: 10px; top:15px;
+    font-size: 30px;
+    color: #c6b48d;
+    /* 클릭시 글씨 0.5s 속도 주기 */
+    transition: all .5s ease; 
+}
+
+.email input:focus + label,
+.email input:valid + label {
+    top:0;
+    font-size: 20px; color: #e7b510;
+}
+
+h3{
+    font-size: 38px;
+    font-weight: 400;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    color:#a96434;
+}
+
+.joinBox {
+    font-size: 15px;
+}
+
+.joinBoxDiv {
+    font-size: 22px;
+}
+
+.btn2 {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 63%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background: rgb(234 177 137);
+    color: rgb(255 255 255);
+    padding: 14px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.3s ease-out;
+}
+
+.joinBoxTitle{
+    padding-top: 23px;
+    color: #c6b48d;;
+}
+
+.int-area {
+    width:400px;
+    position: relative;
+    margin-top: 20px;
+}
+.int-area:first-child{
+    margin-top:0;
+}
+.int-area input {
+    width:100%;
+    padding:20px 10px 10px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #000;;
+    font-size: 30px;
+    color: #482727;
+    outline: none;
+}
+.int-area label{
+    position: absolute; left: 10px; top:15px;
+    font-size: 30px;
+    color: #c6b48d;
+    /* 클릭시 글씨 0.5s 속도 주기 */
+    transition: all .5s ease; 
+}
+
+.int-area label.warning {
+    color:  rgb(255, 65, 65)  !important;
+    
+}
+
+@keyframes warning {
+    0% {transform: translateX(-7px);}
+    25% {transform: translateX(7px);}
+    50% {transform: translateX(-7px);}
+    75% {transform: translateX(7px);}
+}
+
+
+.int-area label.warning2 {
+    color: rgb(255, 65, 65) !important;
+    animation: warning .3s ease;
+    animation-iteration-count: 3;
+}
+@keyframes warning2 {
+    0% {transform: translateX(-1px);}
+    25% {transform: translateX(1px);}
+    50% {transform: translateX(-1px);}
+    75% {transform: translateX(1px);}
+}
+
+.int-area label.warning3 {
+    color: #4cad51 !important;
+   
+    animation-iteration-count: 3;
+   
+}
+
+.int-area label.warning4 {
+    color: #e7b510 !important;
+   
+}
+
+.pw2error{
+    display: none;
+}
+
+.error {
+    display: block;
+}
+
+
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top:0;
+    font-size: 20px; color: #e7b510;
+}
+
+.btn3
+{
+    background: rgb(234 177 137);
+    color: rgb(255 255 255);
+    border: 0;
+    height: 35px;
+    width: 85px;
+    margin-left: 12px;
+    /* margin-bottom: 8px; */
+    /* margin-top: 0px; */
+    padding-bottom: -7px;
+    padding-top: 15px;
+}
+
+
+

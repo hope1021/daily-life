@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from '../../node_modules/axios/index';
 import { useNavigate } from '../../node_modules/react-router-dom/index';
+import './Join.css';
 
 
 function Join() {
@@ -37,6 +38,7 @@ function Join() {
         })
   };
 
+  
   const onSubmit = (e) => {
         e.preventDefault();
 
@@ -62,48 +64,116 @@ function Join() {
     memEmailText.value = e.target.value
   }
 
+  function validEmail(obj){
+    if(validEmailCheck(obj)==false){
+        alert('올바른 이메일 주소를 입력해주세요.')
+        obj.value='';
+        obj.focus();
+        return false;
+    }
+}
+
+function validEmailCheck(obj){
+    var pattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    return (obj.value.match(pattern)!=null)
+}
+
+
+function check(){
+  let id = document.querySelector('#id')
+  let pw = document.querySelector('#pw')
+  let pw2 = document.querySelector('#pw2')
+  let btn = document.querySelector('#btn')
+  let label = document.querySelectorAll('label')
+
+  btn.addEventListener('click', () => {
+      if(id.value == "") {
+          label = id.nextElementSibling
+          label.classList.add('warning')
+          setTimeout(() => {
+              label.classList.remove('warning')
+          }, 1500)
+      }  else if(pw2.value != pw.value) {
+        label = pw2.nextElementSibling
+        label.classList.add('warning2')
+        setTimeout(() => {
+            label.classList.remove('warning2')
+        }, 1500)
+     } 
+  })
+}
+
+function check2(){
+  let pw = document.querySelector('#pw')
+  let pw2 = document.querySelector('#pw2')
+  let btn2 = document.querySelector('#btn2')
+  let label = document.querySelectorAll('label')
+
+  btn2.addEventListener('click', () => {
+      if(pw2.value != pw.value) {
+        label = pw2.nextElementSibling
+        label.classList.add('warning2')
+        setTimeout(() => {
+            label.classList.remove('warning2')
+        }, 1500)
+     } else if(pw2.value == pw.value) {
+      label = pw2.nextElementSibling
+      label.classList.add('warning3')
+      setTimeout(() => {
+        label.classList.remove('warning3')
+    }, 1500)
+    } 
+  })
+}
+
 
   return (
-    <div id = "joinAllForm">
-      <div>회원가입할래요</div>
-      <form name="joinForm" id="joinForm" onSubmit={onSubmit}>
+    <div className='joinAllForm'id= "joinAllForm">
+      
+      <form name="joinForm" id="joinForm" className='joinForm' onSubmit={onSubmit}>
             
             <div>
-              <div>
-               
+              <div className='title'>
+
                     <h3> 회원가입 </h3>
                   </div>
                   
-                  <div id='joinBox'>
+                  <div id='joinBox' className='joinBox'>
                       {/* 이메일 */}
-                      <div>
-                        <h5> 이메일 </h5>
-                        <input type='email' maxLength='15' name='memEmail' value={member.memEmail} onChange={onChange} placeholder="email@example.com"/>
+                      <div className='joinBoxTitle'></div>
+                      <div className='int-area'>
+                        <input type='email' id='id' className='id' maxLength='15' name='memEmail' value={member.memEmail} onChange={onChange} autoComplete='off' required/>
+                          <label for='id'>이메일</label>
                       </div>
 
                       {/* 비밀번호 */}
-                      <div>
-                        <h5> 비밀번호 </h5>
-                        <input type='password' maxLength='15' name='memPw' onChange={onChange} value={member.memPw} />
+                      <div className='joinBoxTitle'></div>
+                      <div className='int-area'>
+                        <input type='password' id='pw' className='pw' maxLength='15' name='memPw' onChange={onChange} value={member.memPw} autoComplete='off' required/>
+                           <label for='pw'>비밀번호</label>
                       </div>
 
                       {/* 비밀번호 */}
-                      <div>
-                        <h5> 비밀번호 확인 </h5>
-                        <input type='password' maxLength='15' name='joinPw'/>
+                      <div className='joinBoxTitle'></div>
+                      <div className='int-area'>
+                        <input type='password'  id='pw2' className='pw2' maxLength='15' name='joinPw' autoComplete='off' required/>
+                          <label for='pw2'>비밀번호 재확인 </label>
+                        <button className='btn2' id="btn2"  type="button" onClick={check2}>비밀번호 확인</button>
                       </div>
                     
 
                       {/* 닉네임 */}
-                      <div>
-                        <h5> 닉네임 </h5>
-                        <input type='text' maxLength='10' name='memNick' value={member.memNick} onChange={onChange}/>
+                      <div className='joinBoxTitle'></div>
+                      <div className='int-area'>
+                        <input type='text' className='memNick' maxLength='10' name='memNick' value={member.memNick} onChange={onChange} autoComplete='off' required/>
+                        <label for='pw'>닉네임</label>
                       </div>
 
                        {/* 자기소개 */}
-                       <div>
-                        <h5> 자기소개 </h5>
-                        <input type='text' maxLength='100' name='memInfo' value={member.memInfo} onChange={onChange}/>
+                       <div className='joinBoxTitle'></div>
+                       <div className='int-area'>
+                        <input type='text'  className='memInfo' maxLength='100' name='memInfo' value={member.memInfo} onChange={onChange} autoComplete='off' required/>
+                        <label for='pw'>자기소개</label>
                       </div>
 
                       {/* 생년월일
@@ -117,12 +187,11 @@ function Join() {
                   
 
                   <div>
-                    <input type='submit' value='가입하기' name='JoinSubmit'/>
+                    <button className='btn2' id="btn" name='JoinSubmit' type="submit" onClick={check}>가입하기</button>
                  </div>
             </div>
 
         
-
       
       </form>
 
