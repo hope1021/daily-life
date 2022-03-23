@@ -29,6 +29,7 @@ function BoardList() {
 
   return (
     <div className='boardListItemBox'>
+      <h2>실시간 게시글</h2>
       { data.map((board, i)=>{
         return <BoardListItem board={board} key={i} />
       })}

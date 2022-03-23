@@ -5,6 +5,7 @@ import axios from '../node_modules/axios/index';
 
 // Home
 import Home from './components/Home';
+import Banner from './components/Banner';
 // 회원 --------------------------------------------------
 import Login from './components/Login';
 import Join from './components/Join';
@@ -61,6 +62,8 @@ function App() {
   return (
     <div className='App'>
       <IndexNav></IndexNav>
+      <Banner></Banner>
+      <BoardList></BoardList>
       <Routes>
         <Route path="/home" element={<Home data={data}/>} />
 

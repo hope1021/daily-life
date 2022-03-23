@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
 
+body {
+  background-color: #fefff9;
+}
+
 body * {
   font-family: "Gowun Dodum", sans-serif;
 }

@@ -31,9 +31,30 @@ function IndexNav() {
 
     window.addEventListener('resize', showButton);
 
+    const [show, show2] = useState(false);
+  
+
+    const scrollNavbar = ()=>{
+        console.log(window.scrollY)
+        let scroll = parseInt(window.scrollY)
+        if(scroll >= 100) {
+        show2(true)
+        }
+        else {
+        show2(false)
+        }
+    }
+
+    useEffect(()=>{
+        window.addEventListener('scroll', scrollNavbar)
+        return ()=>window.removeEventListener("scroll", scrollNavbar)
+    }, [show])
+
+
   return (
     <>
-      <nav className = 'navbar'>
+      <nav className={`navbar ${show && 'scrollNav'}`}
+>
             <div className = 'navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                 DAILY-LIFE

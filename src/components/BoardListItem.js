@@ -72,26 +72,22 @@ function BoardListItem(props) {
 
 
     return (
-        <div className='boardListItem' style={bgColor}>
+        <div className='boardListItem'>
             <Link to={"/boardDetail/" + props.board.bNo}>
                 <div className='boardItem'>
-                    <div className='bFeelIcon'>
+                    <div className='bFeelIcon' style={bgColor}>
                         <img className="feelIcon" alt="기분아이콘" src={`img/${props.board.feelIcon}`} />
                     </div>
                     <div className='bContents'>
                         <div className='bTitle'>
-                            <h3>{cutText(props.board.bTitle, 13)}</h3>
-                        </div>
-                        <div className='bWriterInfo'>
-                            <h5>by&nbsp;{props.board.memNick}</h5>
+                            <h3>{cutText(props.board.bTitle, 25)}</h3>
+                            <div className='bWriterInfo'>
+                                <h5>by&nbsp;{props.board.memNick}</h5>
+                            </div>
                         </div>
                         <div className='bText'>
-                            <p>{cutText(props.board.bContent, 95)}</p>
+                            <p>{cutText(props.board.bContent, 133)}</p>
                         </div>
-                        <div className='bDateInfo'>
-                            <p>'{props.board.feelType}' 의 {sliceBRD}</p>
-                        </div>
-                        
                     </div>
 
                     {/* <Link to={"/boardUpdate/" + props.board.bNo}>수정</Link><br/>
