@@ -8,6 +8,10 @@ body * {
   font-family: "Gowun Dodum", sans-serif;
 }
 
+.navMargin {
+  height: 500px;
+}
+
 .low {
   display: flex;
   flex-direction: row;

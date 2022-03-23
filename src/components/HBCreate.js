@@ -53,7 +53,7 @@ const HBCreate = () => {
   return (
     <div id='wrap'>
 
-      <Top></Top>
+    <div>&nbsp;</div>
 
       <section className='section2'>
 
@@ -66,7 +66,7 @@ const HBCreate = () => {
         
             <div class="imgBox">
             <img src='img/wjrmaxhd.gif'/>
-            <div className='haha'>Daily-life</div>
+            <div className='haha'>마우스를 올려주세요.</div>
             </div>
             <div class="details">
                 <form name='frmHBCreateForm' className='frmHBCreateForm' onSubmit={onSubmit} onReset={onReset}>

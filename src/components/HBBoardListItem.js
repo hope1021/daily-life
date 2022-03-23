@@ -53,15 +53,18 @@ const HBBoardListItem = (props) => {
     }
 
     return (
-        <div className='hbBoardListItem' style={bgColor}>
+        <div className='hbBoardListItem'>
             <Link to={"/hbBoardDetail/" + props.hb_board.hb_bNo}>
                 <div className='hbBoardItem'>
-                    <div className='hbFeelIcon'>
+                    <div className='hbFeelIcon' style={bgColor}>
                         <img className="feelIcon" alt="기분아이콘" src={`img/${props.hb_board.feelIcon}`} />
                     </div>
                     <div className='hbContents'>
                         <div className='hbTitle'>
                             <h3>{cutText(props.hb_board.hb_bTitle, 7)}</h3>
+                        </div>
+                        <div className='hbText'>
+                            <h3>{cutText(props.hb_board.hb_bContent, 100)}</h3>
                         </div>
                     </div>
                 </div>

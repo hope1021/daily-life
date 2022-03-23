@@ -5,7 +5,6 @@ import axios from '../node_modules/axios/index';
 
 // Home
 import Home from './components/Home';
-import Banner from './components/Banner';
 // 회원 --------------------------------------------------
 import Login from './components/Login';
 import Join from './components/Join';
@@ -62,8 +61,7 @@ function App() {
   return (
     <div className='App'>
       <IndexNav></IndexNav>
-      <Banner></Banner>
-      <BoardList></BoardList>
+      <div className='navMargin'></div>
       <Routes>
         <Route path="/home" element={<Home data={data}/>} />
 
@@ -75,7 +73,7 @@ function App() {
         <Route path="/IndexNav" element={<IndexNav/>} />
         <Route path="/IndexBottom" element={<IndexBottom/>} />
 
-        <Route path="/BoardList" element={<BoardList/>} />
+        <Route path="/" element={<BoardList/>} />
         <Route path="/BoardListItem" element={<BoardListItem/>} />
         <Route path="/BoardInsert" element={<BoardInsert/>} />
         <Route path="/BoardUpdate/:bNo" element={<BoardUpdate/>} />

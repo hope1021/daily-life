@@ -1,15 +1,15 @@
 .hbBoardListItem {
-  width: 200px;
-  height: 200px;
+  width: 811px;
+  height: 130px;
   display: inline-block;
   margin: 13px;
-  border-radius: 7px;
-  box-shadow: 6px 7px 5px 1px #e7e7e7;
-  border-radius: 50%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 1px #e2e2e2;
+  transition: all 0.6s;
 }
 
 .hbBoardListItem:hover {
-  box-shadow: 6px 7px 5px 1px #d4d1d1;
+  box-shadow: 2px 2px 5px 1px #d4d1d1;
 }
 
 .hbBoardListItem * {
@@ -20,32 +20,39 @@
   width: 100%;
   color: black;
   overflow: hidden;
-  padding-top: 38px;
   transition: all 0.4s;
+  background: white;
+  border-radius: 10px;
 }
 
 .hbFeelIcon {
-  height: 128px;
+  height: 130px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hbFeelIcon > img {
-  height: 120px;
+  height: 110px;
 }
 
 .hbContents {
   height: 250px;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .hbTitle > h3 {
   font-size: 17px;
 }
 
-.hbBoardListItem:hover .hbBoardItem {
+/* .hbBoardListItem:hover .hbBoardItem {
   padding-top: 20px;
   transition: all 0.6s;
 }
 
 .hbBoardListItem:hover .hbContents {
   opacity: 1;
-}
+} */
