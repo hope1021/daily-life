@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import BoardListItem from './BoardListItem'
+import BoardListItem from './BoardListItem';
+import Banner from './Banner';
 import './BoardList.css';
 import { useSelector } from 'react-redux';
 
@@ -29,6 +30,7 @@ function BoardList() {
 
   return (
     <div className='boardListItemBox'>
+      <Banner></Banner>
       <h2>실시간 게시글</h2>
       { data.map((board, i)=>{
         return <BoardListItem board={board} key={i} />

@@ -5,6 +5,7 @@ import axios from '../node_modules/axios/index';
 
 // Home
 import Home from './components/Home';
+import Banner from './components/Banner';
 // 회원 --------------------------------------------------
 import Login from './components/Login';
 import Join from './components/Join';

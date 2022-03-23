@@ -198,7 +198,7 @@
       jihodaddy :
       roditee   :
       hyov_vely : 회원가입 프론트
-      HANGYESUK : 메인페이지의 일반게시글, 게시글 기분에 따라 배경색 바뀌는 기능
+      HANGYESUK : 메인페이지의 일반게시글
 ```
 
 <hr>
@@ -239,7 +239,7 @@
       jihodaddy :
       roditee   :
       hyov_vely :
-      HANGYESUK : 로그인 리덕스, 수정 삭제(본인 아이디만), 글쓰기 제한(로그인), Nav바 애니메이션
+      HANGYESUK :
 
 ```
 

@@ -49,7 +49,7 @@ function Join() {
         console.log(frmData)
 
 
-        axios.post('http://localhost:8080/join', frmData)
+        axios.post('http://localhost:8080/userJoin', frmData)
             .then(
                 response => {
                     alert("등록 완료");

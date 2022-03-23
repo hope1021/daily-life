@@ -1,0 +1,5 @@
+.bannerBox > img {
+  width: 100%;
+  position: relative;
+  top: -80px;
+}

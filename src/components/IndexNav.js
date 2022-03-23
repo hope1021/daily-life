@@ -73,8 +73,8 @@ function IndexNav() {
 
   return (
     <>
-      <nav className={`navbar ${show && 'scrollNav'}`}
->
+      {/* <nav className={`navbar ${show && 'scrollNav'}`}> */}
+      <nav className='navbar'>
             <div className = 'navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                 DAILY-LIFE
