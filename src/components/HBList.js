@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 import HBListItem from './HBListItem';
 
 
 function HBList(props) {
+
+     //로그인한 id 불러오기
+    const state = useSelector((state)=>state)
+
+    const login = state.loginReducer
+    console.log(login)
 
     // state
     const [HBDate, setHBDate] = useState([]);
@@ -13,8 +20,9 @@ function HBList(props) {
     // state 값 저장
     const HBLoadDate = async () => {
         setHBLoading(true);
-        const response = await axios.get('http://localhost:8080/HBList');
+        const response = await axios.get('http://localhost:8080/HBList/' + login);
         setHBDate(response.data.HBList);
+        console.log(response.data.HBList)
         setHBLoading(false);
     }
 

@@ -67,22 +67,32 @@ const HBUpdate = () => {
 
     return (
         <div className='hbUp'>
-            <h3>저금통 정보 수정</h3>
-            <form name="frmHBUpdate" onSubmit={onSubmit} onReset={onReset}>
+            <h2>저금통 정보 수정</h2>
+            <div className='hbUpForm'>
+                <form name="frmHBUpdate" onSubmit={onSubmit} onReset={onReset}>
 
-                <h3>저금통의 이름을 바꾸실건가요?</h3>
-                <input type='text' name='hbName' value={HB.hbName} onChange={onChange} />
-                <input type="hidden" name='hbNo' value={hbNo} onChange={onChange} readOnly/>
+                    <input type='text' name='hbName' value={HB.hbName} onChange={onChange} />
+                    <input type="hidden" name='hbNo' value={hbNo} onChange={onChange} readOnly/>
 
-                {/* <input type='hidden' name='hbStartDate' value={HB.hbStartDate} /> */}
-                {/* <input type='hidden' name='hbEndDate' value={HB.hbEndDate} />
-                <input type='hidden' name='memEmail' value={HB.memEmail} /> */}
+                    {/* <input type='hidden' name='hbStartDate' value={HB.hbStartDate} /> */}
+                    {/* <input type='hidden' name='hbEndDate' value={HB.hbEndDate} />
+                    <input type='hidden' name='memEmail' value={HB.memEmail} /> */}
 
-                <br/>
-                <input type="submit" className='btn1' value="수정" /> &nbsp;
-                <input type="reset" className='btn2' value="취소" />
-            </form>
+                    <br/><br/>
+                    <h3>바꾸실 이름을 입력하시고 수정버튼을 눌러주세요 </h3>
 
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="submit" className='btn_1' value="수정" />
+                            </td>
+                            <td>
+                                <input type="reset" className='btn_2' value="취소" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
         </div>
     );
 }

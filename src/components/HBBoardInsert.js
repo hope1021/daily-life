@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './HBBoardInsert.css';
 
 const HBBoardInsert = () => {
     let history = useNavigate();
@@ -37,64 +38,80 @@ const HBBoardInsert = () => {
     }
 
     return (
-        <div>
+        <div className='insertTitle'>
             <h3>행복 저금통 게시글 등록</h3>
-            <form name="HBBoardInsertForm" onSubmit={onSubmit}>
+            <form className='HBBoardInsertForm' name="HBBoardInsertForm" onSubmit={onSubmit}>
+                <div  className='tableDetailLine'>
                 <table>
                     <thead>
                         <tr>
-                            <td>회원이메일</td>
+                            {/* <td>회원이메일</td> */}
                             <td><input
                                 type="text"
                                 name="memEmail"
+                                className='memEmail'
                                 value={hb_board.memEmail}
                                 onChange={onChange} />
                             </td>
                         </tr>
                         <tr>
-                            <td>제목</td>
+                            {/* <td>제목</td> */}
                             <td><input
                                 type="text"
+                                className='hb_bTitle'
                                 name="hb_bTitle"
                                 value={hb_board.hb_bTitle}
-                                onChange={onChange} />
+                                onChange={onChange} 
+                                placeholder='제목을 입력하세요'/>
                             </td>
                         </tr>
                         <tr>
-                            <td>내용</td>
-                            <td><input
+                            {/* <td>내용</td> */}
+                            <td>
+                                <textarea className='hb_bContent' 
                                 type="text"
                                 name="hb_bContent"
                                 value={hb_board.hb_bContent}
-                                onChange={onChange} />
+                                onChange={onChange}
+                                placeholder='내용을 입력하세요'
+                                ></textarea>
+                                {/* <input
+                                type="text"
+                                name="hb_bContent"
+                                value={hb_board.hb_bContent}
+                                onChange={onChange} /> */}
                             </td>
                         </tr>
                         <tr>
-                            <td>기분</td>
+                            {/* <td>기분</td> */}
                             <td>
-                                <label for="glad">기쁨</label><input id="glad" type="radio" name="feelNo" value={1} onChange={onChange} />
-                                <label for="happy">행복</label><input id="happy" type="radio" name="feelNo" value={2} onChange={onChange} />
-                                <label for="proud">뿌듯</label><input id="proud" type="radio" name="feelNo" value={3} onChange={onChange} />
-                                <label for="calm">평온</label><input id="calm" type="radio" name="feelNo" value={4} onChange={onChange} />
-                                <label for="special">스페셜</label><input id="special" type="radio" name="feelNo" value={11} onChange={onChange} />
+                                <div className='Emotion2'>
+                                <label for="glad"><img src='img/glad.png'/></label><input id="glad" type="radio" name="feelNo" value={1} onChange={onChange} />
+                                <label for="happy"> <img src='img/happy.png'/></label><input id="happy" type="radio" name="feelNo" value={2} onChange={onChange} />
+                                <label for="proud"><img src='img/proud.png'/></label><input id="proud" type="radio" name="feelNo" value={3} onChange={onChange} />
+                                <label for="calm"><img src='img/calm.png'/></label><input id="calm" type="radio" name="feelNo" value={4} onChange={onChange} />
+                                <label for="special"><img src='img/special.png'/></label><input id="special" type="radio" name="feelNo" value={11} onChange={onChange} />
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>저금통번호</td>
+                            {/* <td>저금통번호</td> */}
                             <td><input
                                 type="text"
                                 name="hbNo"
+                                className='hbNo'
                                 value={hb_board.hbNo}
                                 onChange={onChange} />
                             </td>
                         </tr>
                         <tr>
                             <td colSpan="2">
-                                <input type="submit" value="등록" />
+                                <input className='insertBtn2' type="submit" value="등록" />
                             </td>
                         </tr>
                     </thead>
                 </table>
+                </div>
             </form>
         </div>
     );
