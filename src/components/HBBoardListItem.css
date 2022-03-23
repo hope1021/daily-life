@@ -1,10 +1,11 @@
 .hbBoardListItem {
-  width: 340px;
-  height: 415px;
+  width: 200px;
+  height: 200px;
   display: inline-block;
   margin: 13px;
   border-radius: 7px;
   box-shadow: 6px 7px 5px 1px #e7e7e7;
+  border-radius: 50%;
 }
 
 .hbBoardListItem:hover {
@@ -19,47 +20,32 @@
   width: 100%;
   color: black;
   overflow: hidden;
-  padding-top: 65px;
+  padding-top: 38px;
   transition: all 0.4s;
 }
 
 .hbFeelIcon {
-  height: 170px;
+  height: 128px;
 }
 
 .hbFeelIcon > img {
-  height: 130px;
-  margin-top: 30px;
+  height: 120px;
 }
 
 .hbContents {
   height: 250px;
-  padding: 27px 30px 0 30px;
+  opacity: 0;
 }
 
 .hbTitle > h3 {
-  font-size: 20px;
-}
-
-.hbText {
-  margin: 23px 0;
-  height: 100px;
-  opacity: 0;
-}
-
-.hbInfo {
-  display: flex;
-  justify-content: space-between;
-  opacity: 0;
-}
-
-.hbBoardListItem:hover .hbText,
-.hbBoardListItem:hover .hbInfo {
-  opacity: 1;
-  transition: all 0.6s;
+  font-size: 17px;
 }
 
 .hbBoardListItem:hover .hbBoardItem {
-  padding-top: 0px;
+  padding-top: 20px;
   transition: all 0.6s;
+}
+
+.hbBoardListItem:hover .hbContents {
+  opacity: 1;
 }

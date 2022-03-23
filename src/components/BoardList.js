@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BoardListItem from './BoardListItem'
+import './BoardList.css';
 
 function BoardList() {
 
@@ -27,8 +28,7 @@ function BoardList() {
   }, []);
 
   return (
-    <div>
-      <h3>일반 게시글 전체 목록 조회</h3>
+    <div className='boardListItemBox'>
       { data.map((board, i)=>{
         return <BoardListItem board={board} key={i} />
       })}

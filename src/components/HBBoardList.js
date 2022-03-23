@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import HBBoardListItem from './HBBoardListItem'
+import './HBBoardList.css';
 
 const HBBoardList = () => {
     // state
@@ -26,7 +27,7 @@ const HBBoardList = () => {
     return (
         <div>
             <h3>저금통 게시글 전체 목록 조회</h3>
-            <div className=''>
+            <div className='hbListItemBox'>
                 { data.map(function (hb_board, i) {
                     return <HBBoardListItem hb_board={hb_board} key={i} />
                 })}
