@@ -142,21 +142,21 @@ function check2(){
                       {/* 이메일 */}
                       <div className='joinBoxTitle'></div>
                       <div className='int-area'>
-                        <input type='email' id='id' className='id' maxLength='15' name='memEmail' value={member.memEmail} onChange={onChange} autoComplete='off' required/>
+                        <input type='email' id='id' className='id' maxLength='30' name='memEmail' value={member.memEmail} onChange={onChange} autoComplete='off' required/>
                           <label for='id'>이메일</label>
                       </div>
 
                       {/* 비밀번호 */}
                       <div className='joinBoxTitle'></div>
                       <div className='int-area'>
-                        <input type='password' id='pw' className='pw' maxLength='15' name='memPw' onChange={onChange} value={member.memPw} autoComplete='off' required/>
+                        <input type='password' id='pw' className='pw' maxLength='30' name='memPw' onChange={onChange} value={member.memPw} autoComplete='off' required/>
                            <label for='pw'>비밀번호</label>
                       </div>
 
                       {/* 비밀번호 */}
                       <div className='joinBoxTitle'></div>
                       <div className='int-area'>
-                        <input type='password'  id='pw2' className='pw2' maxLength='15' name='joinPw' autoComplete='off' required/>
+                        <input type='password'  id='pw2' className='pw2' maxLength='30' name='joinPw' autoComplete='off' required/>
                           <label for='pw2'>비밀번호 재확인 </label>
                         <button className='btn2' id="btn2"  type="button" onClick={check2}>비밀번호 확인</button>
                       </div>

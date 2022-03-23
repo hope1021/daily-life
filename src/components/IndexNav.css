@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+
 .navbar {
   height: 420px;
   width: 100%;
@@ -59,6 +61,7 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+  font-family: "Gowun Batang", serif;
 }
 
 /* .nav-links:hover {

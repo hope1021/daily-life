@@ -58,7 +58,7 @@ function BoardListItem(props) {
             axios.get('http://localhost:8080/boardDelete/' + props.board.bNo)
                 .then(
                     () => {
-                        history('/boardList');
+                        history('/');
                         window.location.reload();
                         // reload 하지 않으면
                         // DB에서는 삭제되지만 현재 화면은 안 바뀜
@@ -83,15 +83,15 @@ function BoardListItem(props) {
                             <h3>{cutText(props.board.bTitle, 25)}</h3>
                             <div className='bWriterInfo'>
                                 <h5>by&nbsp;{props.board.memNick}</h5>
+                                <h5>by&nbsp;{props.board.memEmail}</h5> {/* 이메일 */}
                             </div>
                         </div>
                         <div className='bText'>
                             <p>{cutText(props.board.bContent, 133)}</p>
+                            <Link to={"/boardUpdate/" + props.board.bNo}>수정</Link>
+                    <button onClick={onDeleteItem}>삭제</button>
                         </div>
                     </div>
-
-                    {/* <Link to={"/boardUpdate/" + props.board.bNo}>수정</Link><br/>
-                    <button onClick={onDeleteItem}>삭제</button> */}
                 </div>
             </Link>
         </div>

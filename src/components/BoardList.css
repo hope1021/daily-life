@@ -2,3 +2,8 @@
   width: 1200px;
   margin: 0 auto;
 }
+
+.boardListItemBox h2 {
+  font-size: 30px;
+  margin: 55px 0 40px 0;
+}

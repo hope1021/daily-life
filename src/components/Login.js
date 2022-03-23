@@ -102,7 +102,7 @@ const onSubmit = () => {
             </div>
 
           <div className='caption'>
-            <a href=''>아이디 / 비밀번호 찾기</a>
+            <Link to="../Join">회원가입</Link>
           </div>
         </section>
       </form>
