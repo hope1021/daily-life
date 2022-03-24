@@ -52,7 +52,7 @@ const HBBoardListItem = (props) => {
             <Link to={"/hbBoardDetail/" + props.hb_board.hb_bNo}>
                 <div className='hbBoardItem'>
                     <div className='hbFeelIcon'>
-                    <img className="feelIcon" alt="기분아이콘" src={`img/${props.hb_board.feelIcon}`} />
+                    <img className="feelIcon" alt="기분아이콘" src={`/img/${props.hb_board.feelIcon}`} />
                     </div>
                     <div className='hbContents'>
                         <div className='hbTitle'>

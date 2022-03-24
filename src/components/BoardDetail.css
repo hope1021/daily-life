@@ -12,8 +12,8 @@
 .bBTitle {
   width: 900px;
   position: absolute;
-  top: 50%;
-  left: 25%;
+  top: 170px;
+  left: 435px;
   text-align: left;
 }
 
@@ -22,8 +22,8 @@
   width: 400px;
   display: inline-block;
   position: absolute;
-  top: 69%;
-  left: 26%;
+  top: 240px;
+  left: 450px;
   text-align: left;
 }
 
@@ -34,5 +34,26 @@
   font-size: 18px;
   line-height: 35px;
   position: absolute;
-  left: 25%;
+  left: 205px;
+}
+
+.bDetailBtnBox {
+  position: absolute;
+  top: 240px;
+  right: 370px;
+}
+
+.bUpdateBtn {
+  text-decoration: none;
+  color: black;
+}
+
+.bDeleteBtn {
+  background: none;
+  border: none;
+  font-size: 15px;
+}
+
+.bBtn {
+  margin: 0 5px;
 }

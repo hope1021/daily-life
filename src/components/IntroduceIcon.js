@@ -11,7 +11,7 @@ const IntroduceIcon = () => {
                     <img src='img/intro1.png'/>
                     
                 <h3>Daily-Life 핵심 기능</h3>
-                     <img src='img/intro2.png'/>
+                    <img src='img/intro2.png'/>
 
             </div>
             <h3>Daily-Life의 기분이들을 소개합니다.</h3>
@@ -120,6 +120,16 @@ const IntroduceIcon = () => {
                         <h3 className='iconName'>피고니</h3>
                         <p className='iconDetail'>피곤의 아이콘.<br/>바다에서 올라온 지 얼마 되지 않아 육지의 모든 것이 신기하고 재미있다.</p>
                     </div>
+                </div>
+            </div>
+            <div className='footerInfo'>
+                <h2>Developer</h2>
+                <div className='teamInfo'>
+                    <span><a href="https://github.com/hope1021" target='_blank'>DaYoung</a></span>
+                    <span><a href="https://github.com/jihodaddy" target='_blank'>SeKyeong</a></span>
+                    <span><a href="https://github.com/hyovvely" target='_blank'>HyoSeok</a></span>
+                    <span><a href="https://github.com/roditee" target='_blank'>NaHyun</a></span>
+                    <span><a href="https://github.com/HANGYESUK" target='_blank'>KyuSeok</a></span>
                 </div>
             </div>
         </div>

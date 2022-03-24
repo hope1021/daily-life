@@ -86,11 +86,11 @@ const HBBoardInsert = () => {
                             {/* <td>기분</td> */}
                             <td>
                                 <div className='Emotion2'>
-                                <label for="glad"><img src='img/glad.png'/></label><input id="glad" type="radio" name="feelNo" value={1} onChange={onChange} />
-                                <label for="happy"> <img src='img/happy.png'/></label><input id="happy" type="radio" name="feelNo" value={2} onChange={onChange} />
-                                <label for="proud"><img src='img/proud.png'/></label><input id="proud" type="radio" name="feelNo" value={3} onChange={onChange} />
-                                <label for="calm"><img src='img/calm.png'/></label><input id="calm" type="radio" name="feelNo" value={4} onChange={onChange} />
-                                <label for="special"><img src='img/special.png'/></label><input id="special" type="radio" name="feelNo" value={11} onChange={onChange} />
+                                <label for="glad"><img src='/img/glad.png'/></label><input id="glad" type="radio" name="feelNo" value={1} onChange={onChange} />
+                                <label for="happy"> <img src='/img/happy.png'/></label><input id="happy" type="radio" name="feelNo" value={2} onChange={onChange} />
+                                <label for="proud"><img src='/img/proud.png'/></label><input id="proud" type="radio" name="feelNo" value={3} onChange={onChange} />
+                                <label for="calm"><img src='/img/calm.png'/></label><input id="calm" type="radio" name="feelNo" value={4} onChange={onChange} />
+                                <label for="special"><img src='/img/special.png'/></label><input id="special" type="radio" name="feelNo" value={11} onChange={onChange} />
                                 </div>
                             </td>
                         </tr>
@@ -104,14 +104,10 @@ const HBBoardInsert = () => {
                                 onChange={onChange} />
                             </td>
                         </tr>
-                        <tr>
-                            <td colSpan="2">
-                                <input className='insertBtn2' type="submit" value="등록" />
-                            </td>
-                        </tr>
                     </thead>
                 </table>
                 </div>
+                <input className='insertBtn2' type="submit" value="오늘의 행복 쓰기" />
             </form>
         </div>
     );

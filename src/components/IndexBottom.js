@@ -4,14 +4,6 @@ import { Link } from 'react-router-dom';
 function Bottom() {
   return (
     <div className='footer'>
-      <div className='footerInfo'>
-        <span><a href="https://github.com/hope1021" target='_blank'>DaYoung</a></span>
-        <span><a href="https://github.com/jihodaddy" target='_blank'>SeKyeong</a></span>
-        <span><a href="https://github.com/hyovvely" target='_blank'>HyoSeok</a></span>
-        <span><a href="https://github.com/roditee" target='_blank'>NaHyun</a></span>
-        <span><a href="https://github.com/HANGYESUK" target='_blank'>KyuSeok</a></span>
-      </div>
-      {/*  */}
       <div className='linkBox'>
         <Link to="/home">[홈]</Link> &nbsp; <hr/>
 

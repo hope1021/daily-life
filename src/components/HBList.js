@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import HBListItem from './HBListItem';
@@ -36,14 +37,23 @@ function HBList(props) {
     return (
         <div id='wrap'>
             <section>
-                <h1>행복 저금통 목록</h1>
-                    <div className='AllHBList'>
-                    {
-                        HBDate.map(function (HB, i) {
-                            return <HBListItem HB={HB} key={i} />
-                        })
-                    }
+                <div className='hbCreateBox'>
+                    <Link to="../HBCreate" >
+                        <div className='hbCreate'>
+
+                        </div>
+                    </Link>
+                    <div>
+                        <h1>행복 저금통 목록</h1>
+                        <div className='AllHBList'>
+                        {
+                            HBDate.map(function (HB, i) {
+                                return <HBListItem HB={HB} key={i} />
+                            })
+                        }
+                        </div>
                     </div>
+                </div>
             </section>
         </div>
     );

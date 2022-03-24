@@ -41,22 +41,22 @@ function App() {
 
   // 서버에 요청해서 데이터 받아옴
   // state 값 저장
-  const loadData = async () => {
-    setLoading(true);
-    const response = await axios.get('http://localhost:8080/home');
-    console.log(response.data);
-    setData(response.data.boardList);
-    setLoading(false);
-  }
+  // const loadData = async () => {
+  //   setLoading(true);
+  //   const response = await axios.get('http://localhost:8080/home');
+  //   console.log(response.data);
+  //   setData(response.data.boardList);
+  //   setLoading(false);
+  // }
 
-  // 렌더링할 때마다 호출 
-    // 빈배열 : loadData() 한 번만 호출
-    useEffect(() => {
-      loadData();
-  }, []);
+  // // 렌더링할 때마다 호출 
+  //   // 빈배열 : loadData() 한 번만 호출
+  //   useEffect(() => {
+  //     loadData();
+  // }, []);
 
 
-  console.log(data)
+  // console.log(data)
 
 
   return (
@@ -85,9 +85,9 @@ function App() {
         <Route path="/HBUpdate/:hbNo" element={<HBUpdate />} />
         <Route path="/HBOpen" element={<HBOpen/>} />
 
-        <Route path="/HBBoardList" element={<HBBoardList/>} />
+        <Route path="/HBBoardList/:hbNo" element={<HBBoardList/>} />
         <Route path="/HBBoardListItem" element={<HBBoardListItem/>} />
-        <Route path="/HBBoardInsert" element={<HBBoardInsert/>} />
+        <Route path="/HBBoardInsert/:hbNo" element={<HBBoardInsert/>} />
         <Route path="/HBBoardDetail/:hb_bNo" element={<HBBoardDetail/>} />
 
         <Route path="/IntroduceIcon" element={<IntroduceIcon/>} />

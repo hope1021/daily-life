@@ -47,7 +47,6 @@
   text-align: center;
   width: 60vw;
   justify-content: end;
-  margin-right: 2rem;
 }
 
 .nav-item {
@@ -62,6 +61,7 @@
   padding: 0.5rem 1rem;
   height: 100%;
   font-family: "Gowun Batang", serif;
+  font-weight: bold;
 }
 
 /* .nav-links:hover {

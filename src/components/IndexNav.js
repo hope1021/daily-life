@@ -87,7 +87,7 @@ function IndexNav() {
         <nav className='navbar'>
             <div className = 'navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                DAILY-LIFE
+                Daily-Life
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
                     <label>

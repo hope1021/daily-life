@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import HBBoardListItem from './HBBoardListItem'
 import './HBBoardList.css';
 
-const HBBoardList = () => {
+const HBBoardList = (props) => {
+
+    const { hbNo } = useParams();
+
     // state
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -12,7 +16,7 @@ const HBBoardList = () => {
     // state 값 저장
     const loadData = async () => {
     setLoading(true);
-    const response = await axios.get('http://localhost:8080/hbBoardList');
+    const response = await axios.get('http://localhost:8080/hbBoardList/'+ hbNo );
     // console.log(response.data);
     setData(response.data.hbBoardList);
     setLoading(false);

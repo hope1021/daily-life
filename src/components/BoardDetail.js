@@ -128,8 +128,8 @@ const BoardDetail = (props) => {
                 </div>
                 {
                     login == board.memEmail
-                    ? <div><Link to={"/boardUpdate/" + board.bNo}>수정</Link>
-                        <button onClick={onDeleteItem}>삭제</button></div>
+                    ? <div className='bDetailBtnBox'><Link to={"/boardUpdate/" + board.bNo} className='bBtn bUpdateBtn'>수정</Link>
+                        <button className='bBtn bDeleteBtn' onClick={onDeleteItem}>삭제</button></div>
                     : null
                 }
             </div>
