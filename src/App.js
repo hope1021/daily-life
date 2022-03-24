@@ -93,7 +93,6 @@ function App() {
         <Route path="/IntroduceIcon" element={<IntroduceIcon/>} />
 
       </Routes>
-      <IndexBottom></IndexBottom>
     </div>
   );
 }

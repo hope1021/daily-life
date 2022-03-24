@@ -13,6 +13,7 @@
     width: 600px;
     display: flex;
     justify-content: center;
+    margin-top: 90px;
 }
 
 .email {
@@ -110,7 +111,21 @@ position: absolute; left: 10px; top:15px;
     font-size: 22px;
 }
 
-.btn2 {
+.btn7 {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 63%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background: rgb(234 177 137);
+    color: rgb(255 255 255);
+    padding: 14px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.3s ease-out;
+}
+.int-area > button{
     display: block;
     text-align: center;
     margin: 2rem auto;
@@ -153,7 +168,7 @@ position: absolute; left: 10px; top:15px;
     font-size: 30px;
     color: #c6b48d;
     /* 클릭시 글씨 0.5s 속도 주기 */
-    transition: all .5s ease; 
+    transition: all .3s ease; 
 }
 
 .int-area label.warning {
@@ -182,9 +197,9 @@ position: absolute; left: 10px; top:15px;
 }
 
 .int-area label.warning3 {
-    color: #4cad51 !important;
-   
-    animation-iteration-count: 3;
+    color: #00aa09 !important;
+    font-weight: 500;
+    animation-iteration-count: 99;
    
 }
 

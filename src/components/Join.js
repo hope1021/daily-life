@@ -158,7 +158,7 @@ function check2(){
                       <div className='int-area'>
                         <input type='password'  id='pw2' className='pw2' maxLength='30' name='joinPw' autoComplete='off' required/>
                           <label for='pw2'>비밀번호 재확인 </label>
-                        <button className='btn2' id="btn2"  type="button" onClick={check2}>비밀번호 확인</button>
+                        <button className='btn7' id="btn2"  type="button" onClick={check2}>비밀번호 확인</button>
                       </div>
                     
 
@@ -186,8 +186,8 @@ function check2(){
                   </div>
                   
 
-                  <div>
-                    <button className='btn2' id="btn" name='JoinSubmit' type="submit" onClick={check}>가입하기</button>
+                  <div className='joinBtn'>
+                    <button className='btn7' id="btn" name='JoinSubmit' type="submit" onClick={check}>가입하기</button>
                 </div>
             </div>
 

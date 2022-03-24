@@ -26,7 +26,7 @@
 }
 
 .iconTxtBox {
-  width: 153px;
+  width: 174px;
 }
 
 .iconItemImg {
@@ -71,6 +71,7 @@
 .footerInfo {
   background: #fee5e5;
   height: 140px;
+  margin-top: 90px;
 }
 
 .footerInfo h2 {

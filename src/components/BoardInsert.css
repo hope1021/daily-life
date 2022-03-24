@@ -108,3 +108,7 @@ label > img {
 .Emotion1 > input[type="radio"]:checked label > img {
   font-size: 100px;
 }
+
+.insertAllForm {
+  padding-bottom: 130px;
+}

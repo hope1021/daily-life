@@ -38,17 +38,16 @@ function HBList(props) {
         <div id='wrap'>
             <section>
                 <div className='hbCreateBox'>
-                    <Link to="../HBCreate" >
-                        <div className='hbCreate'>
-
-                        </div>
-                    </Link>
                     <div>
                         <h1>행복 저금통 목록</h1>
                         <div className='AllHBList'>
+                        <Link to="../HBCreate" className='hbCreateLink'>
+                            <div className='hbCreate'></div>
+                            <h3>저금통 등록하기</h3>
+                        </Link>
                         {
                             HBDate.map(function (HB, i) {
-                                return <HBListItem HB={HB} key={i} />
+                                return <HBListItem HB={HB} key={i} className='hbListItemMaxWidth'/>
                             })
                         }
                         </div>

@@ -19,7 +19,7 @@ section {
 
 /* 세션에 있는 h1만 조절 */
 section h1 {
-  padding-top: 15px;
+  padding-top: 30px;
 }
 
 /* 브랜드 명 */
@@ -117,19 +117,35 @@ section h1 {
 .hbCreateBox {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 .hbCreate {
-  width: 250px;
-  height: 300px;
+  width: 630px;
+  height: 400px;
   display: inline-block;
-
-  margin: 50px;
+  margin: 50px 0 0 0;
   padding-top: 130px;
-  padding-right: 50px;
-
   background-image: url("/public/img/HB_null.png");
   background-position: 50%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+}
+
+.hbCreateLink {
+  text-decoration: none;
+}
+
+.hbCreateLink h3 {
+  font-size: 23px;
+  color: black;
+  margin-top: 13px;
+}
+
+.hbCreateBox > div > h1 {
+  font-size: xx-large;
+}
+
+.AllHBList {
+  max-width: 1500px;
+  padding-bottom: 130px;
 }
