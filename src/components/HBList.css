@@ -42,27 +42,42 @@ section h1 {
   color: #daa37c;
 }
 
-.btn1 {
-  width: 150px;
-  height: 50px;
-  border: 0;
-  font-size: 25px;
-  border-radius: 5px;
-  background: #f6a89e;
-  color: white;
-  font-weight: 500;
+.btnDiv {
+  width: 182px;
+  margin: -38px 8px 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.btn2 {
-  width: 70px;
-  height: 50px;
-  line-height: 50px;
+.btnDiv a {
+  text-decoration: none;
+}
+
+.hbSubmitBtn {
+  width: 120px;
+  height: 44px;
   border: 0;
-  font-size: 25px;
+  font-size: 21px;
   border-radius: 5px;
   background: #f6a89e;
   color: white;
   font-weight: 500;
+  display: block;
+}
+
+.hbUpdateBtn {
+  width: 60px;
+  height: 37px;
+  line-height: 37px;
+  border: 0;
+  font-size: 19px;
+  border-radius: 5px;
+  background: #f6a89e;
+  color: white;
+  font-weight: 500;
+  display: block;
+  margin: 5px;
 }
 /* 애니메이션 */
 .hb:hover {

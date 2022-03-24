@@ -64,6 +64,7 @@ function IndexNav() {
         console.log(login)
         if(login == null) {
             alert("로그인 후 진행해 주세요")
+            window.location.href = "/login"
         }
         else {
             window.location.href = "/BoardInsert"
@@ -74,6 +75,7 @@ function IndexNav() {
         console.log(login)
         if(login == null) {
             alert("로그인 후 진행해 주세요")
+            window.location.href = "/login"
         }
         else {
             window.location.href = "/HBList"
@@ -87,7 +89,7 @@ function IndexNav() {
         <nav className='navbar'>
             <div className = 'navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                Daily-Life
+                DAILY-LIFE
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
                     <label>
@@ -106,17 +108,14 @@ function IndexNav() {
                     </Link>
                     </li>
                     <li className='nav-item'>
-                        <a className='nav-links' onClick={loginCheck}>
+                        <div className='nav-links' onClick={loginCheck}>
                             글쓰기
-                        </a>
+                        </div>
                     </li>
                     <li className='nav-item'>
-                        <Link to='HBList' className='nav-links' onClick={ () => {
-                                                                    closeMobileMenu()
-                                                                    loginCheckHB()
-                                                                }}>
-                            행복저금통
-                        </Link>
+                            <div className='nav-links' onClick={loginCheckHB}>
+                                행복저금통
+                            </div>
                     </li>
                     <li className='nav-item'>
                         <Link to='Login' className='nav-links-mobile' onClick={closeMobileMenu}>

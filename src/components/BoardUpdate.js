@@ -83,23 +83,26 @@ const BoardUpdate = () => {
                 <table>
                     <thead>
                         <tr>
-                            {/* <td>글번호 : 수정불가</td> */}
-                            <td> <input
-                                type="text"
-                                name="bNo"
-                                value={bNo}
-                                readOnly />
-                            </td>
-                        </tr>
-                        <tr>
                             {/* <td>회원 이메일 : 수정불가</td> */}
                             <td> <input
                                 type="text"
                                 name="memEmail"
+                                className='memEmail'
                                 value={board.memEmail}
                                 readOnly />
                             </td>
                         </tr>
+                        <tr>
+                            {/* <td>글번호 : 수정불가</td> */}
+                            <td> <input
+                                type="text"
+                                name="bNo"
+                                className='bNo'
+                                value={bNo}
+                                readOnly />
+                            </td>
+                        </tr>
+                        
                        
                          {/* <tr>
                             <td>기분</td>
@@ -120,17 +123,17 @@ const BoardUpdate = () => {
                          <tr>
                             <td>
                                 <div className='Emotion1'>
-                                <label for="glad"><img src='img/glad.png'/></label><input id="glad" type="radio" name="feelNo" value={1} onChange={onChange} />
-                                <label for="happy"><img src='img/happy.png'/></label><input id="happy" type="radio" name="feelNo" value={2} onChange={onChange} />
-                                <label for="proud"><img src='img/proud.png'/></label><input id="proud" type="radio" name="feelNo" value={3} onChange={onChange} />
-                                <label for="calm"><img src='img/calm.png'/></label><input id="calm" type="radio" name="feelNo" value={4} onChange={onChange} />
-                                <label for="unrest"><img src='img/unrest.png'/></label><input id="unrest" type="radio" name="feelNo" value={5} onChange={onChange} />
-                                <label for="sad"><img src='img/sad.png'/></label><input id="sad" type="radio" name="feelNo" value={6} onChange={onChange} />
-                                <label for="depressed"><img src='img/depressed.png'/></label><input id="depressed" type="radio" name="feelNo" value={7} onChange={onChange} />
-                                <label for="tired"><img src='img/tired.png'/></label><input id="tired" type="radio" name="feelNo" value={8} onChange={onChange} />
-                                <label for="dissatisfaction"><img src='img/dissatisfaction.png'/></label><input id="dissatisfaction" type="radio" name="feelNo" value={9} onChange={onChange} />
-                                <label for="angry"><img src='img/angry.png'/></label><input id="angry" type="radio" name="feelNo" value={10} onChange={onChange} />
-                                <label for="special"><img src='img/special.png'/></label><input id="special" type="radio" name="feelNo" value={11} onChange={onChange} />
+                                <label for="glad"><img src='/img/glad.png'/></label><input id="glad" type="radio" name="feelNo" value={1} onChange={onChange} />
+                                <label for="happy"><img src='/img/happy.png'/></label><input id="happy" type="radio" name="feelNo" value={2} onChange={onChange} />
+                                <label for="proud"><img src='/img/proud.png'/></label><input id="proud" type="radio" name="feelNo" value={3} onChange={onChange} />
+                                <label for="calm"><img src='/img/calm.png'/></label><input id="calm" type="radio" name="feelNo" value={4} onChange={onChange} />
+                                <label for="unrest"><img src='/img/unrest.png'/></label><input id="unrest" type="radio" name="feelNo" value={5} onChange={onChange} />
+                                <label for="sad"><img src='/img/sad.png'/></label><input id="sad" type="radio" name="feelNo" value={6} onChange={onChange} />
+                                <label for="depressed"><img src='/img/depressed.png'/></label><input id="depressed" type="radio" name="feelNo" value={7} onChange={onChange} />
+                                <label for="tired"><img src='/img/tired.png'/></label><input id="tired" type="radio" name="feelNo" value={8} onChange={onChange} />
+                                <label for="dissatisfaction"><img src='/img/dissatisfaction.png'/></label><input id="dissatisfaction" type="radio" name="feelNo" value={9} onChange={onChange} />
+                                <label for="angry"><img src='/img/angry.png'/></label><input id="angry" type="radio" name="feelNo" value={10} onChange={onChange} />
+                                <label for="special"><img src='/img/special.png'/></label><input id="special" type="radio" name="feelNo" value={11} onChange={onChange} />
                                 </div>
                             </td>
                         </tr>
@@ -146,12 +149,8 @@ const BoardUpdate = () => {
                         </tr>
                         <tr>
                             {/* <td>내용</td> */}
-                            <td> <input
-                                type="text"
-                                name="bContent"
-                                className='bContentText'
-                                value={board.bContent}
-                                onChange={onChange} />
+                            <td>
+                                <textarea className='bContentText' name="bContent" value={board.bContent} onChange={onChange}></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -159,6 +158,7 @@ const BoardUpdate = () => {
                             <td> <input
                                 type="text"
                                 name="bWriteDate"
+                                className='bWriteDate'
                                 value={board.bWriteDate}
                                 readOnly />
                             </td>

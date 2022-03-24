@@ -45,11 +45,11 @@ function HBListItem(props) {
               {/* <tr>{props.HB.hbStartDate}</tr> */}
               <p>{props.HB.hbEndDate}</p>
               {/* <tr>{props.HB.memEmail}</tr> */}
-              <div className="btnDiv">
-                <Link to={"/HBBoardInsert/" + props.HB.hbNo}><input type="submit" className='btn1' value="행복담기" /></Link>
-                <Link to={"/HBUpdate/" + props.HB.hbNo}><input type="submit" className='btn2' value="수정" /></Link>
-              </div>
             </div>
+            <div className="btnDiv">
+                <Link to={"/HBBoardInsert/" + props.HB.hbNo}><input type="submit" className='hbSubmitBtn' value="행복담기" /></Link>
+                <Link to={"/HBUpdate/" + props.HB.hbNo}><input type="submit" className='hbUpdateBtn' value="수정" /></Link>
+              </div>
           </div>
     );
 }

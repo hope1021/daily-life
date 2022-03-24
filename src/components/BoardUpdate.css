@@ -45,3 +45,16 @@ margin-right: 890px;
     border-radius: 13px;
 
 }
+
+
+.bNo{
+    display:none;
+}
+
+.memEmail{
+    display: none;
+}
+
+.bWriteDate{
+    display: none;
+}
