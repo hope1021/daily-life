@@ -2,12 +2,6 @@
 
 ![타이틀](https://user-images.githubusercontent.com/54533283/159070953-823e8291-63fa-44f0-86be-9965a61e2cbf.png)
 
-### 17일 (목) : 개발 일정 수립
-
-` // 자동완성 : rsf(함수) , rsc (클래스)`
-
-` // Git 열기 : 주소 앞에 gitpod.io/#/ 넣기`
-
 <br>
 
 > ❗ 파일 작성 시 명명 규칙
