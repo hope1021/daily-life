@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# 나의 하루 일상 (SubProject)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![타이틀](https://user-images.githubusercontent.com/54533283/159070953-823e8291-63fa-44f0-86be-9965a61e2cbf.png)
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+> ❗ 파일 작성 시 명명 규칙
 
-### `npm start`
+```
+    - 모듈이름_페이지 (ex. Member_Login.js)
+    - components에는 무조건 대문자로 작성할 것
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> 🔍 상세 기능
 
-### `npm test`
+⭐ 메인 (index)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+      * 카테고리
+        - 로그인 전 : 회원가입 / 로그인 연결
+        - 로그인 후 : 글쓰기 / 행복 저금통 / 마이페이지 / 로그아웃 연결
 
-### `npm run build`
+      * 전체 회원이 쓴 글 목록
+        - 모든 회원이 작성한 글 목록이 카드 형식으로 나옴.
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+👨‍👩‍👧‍👦 회원(member)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+     * 회원가입
+       - 유효성 검사 : 이메일, 닉네임
+       - 빈 칸 검사 : 모든 항목에 적용
 
-### `npm run eject`
+     * 로그인
+       - 유효 성 검사 : Email/PW
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+     * 마이페이지
+       - 유효성 검사 : 회원 정보 수정
+       - 내가 쓴 글 : 조회 / 수정 / 삭제
+       - 진행중인 저금통 : 행복 저금통 목록페이지로 연결
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+     * 로그아웃
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+✏ 글짓기 (board)
 
-## Learn More
+```
+      * 쓰기
+        - 유효성 검사 : 모든 항목
+        - 폼 구성 : 제목 / 내용 / 글귀분류 / 기분체크
+              hidden(글귀번호, 회원이메일 , 글쓴시간 )
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+      * 수정
+        - 등록된 내용을 불러와야함.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+      * 목록
+        - 회원이메일로 등록된 게시글 내용만 불러와야함.
+```
 
-### Code Splitting
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+💰 저금통 (happyBank : hb)
 
-### Analyzing the Bundle Size
+```
+      * 목록
+        - 진행 중인 저금통, 지난 저금통 둘다 보여져야함.
+        - 저금통을 누르면 몇개가 저장되어 있는지 보여짐
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+      * 등록
+        - 유효성 검사 : 모든 항목
+        - 폼 구성 : 저금통 글 내용(제목) / 글 내용 /
+                  hidden(저금통 글 번호, 저금통 번호, 작성시간, 회원이메일)
 
-### Making a Progressive Web App
+      * 오픈
+        - 오픈 버튼 -> 저장된 글 목록 나옴
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+      *  지난 저금통
+        - 저금통 클릭 -> 저장된 글 목록 나옴
+```
 
-### Advanced Configuration
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
